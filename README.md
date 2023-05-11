@@ -1,16 +1,17 @@
 # fluttercon_2023_presentation
 
-A new Flutter project.
+An unique experience. A Flutter experience!
+Presentation slides, but made in Flutter for the https://fluttercon.dev/ 2023.
+Here is my speaker page: https://fluttercon.dev/lucas-goldner/
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+_Warning:_ Currently only supports macos,
+since the required functionality for the presentation needs access to Apple's APIs.
 
-A few resources to get you started if this is your first Flutter project:
+In order to run the project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+$ flutter pub get
+$ flutter run -d macos
+```
