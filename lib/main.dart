@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fluttercon_2023_presentation/presentation.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fluttercon_2023_presentation/generated/l10n.dart';
+import 'package:fluttercon_2023_presentation/presentation/view/presentation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  runApp(const MyPresentation());
+  runApp(const ProviderScope(child: MyPresentation()));
 }
 
 class MyPresentation extends StatelessWidget {
@@ -10,10 +13,18 @@ class MyPresentation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoApp(
-      title: "Fluttercon 2023 - Lucas Goldner",
-      home: Presentation(),
+    return CupertinoApp(
+      key: const Key('MainApp'),
+      home: const Presentation(),
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      locale: const Locale('en'),
     );
   }
 }

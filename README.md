@@ -9,9 +9,15 @@ Here is my speaker page: https://fluttercon.dev/lucas-goldner/
 _Warning:_ Currently only supports macos,
 since the required functionality for the presentation needs access to Apple's APIs.
 
-In order to run the project:
+To run the project use:
 
 ```
 $ flutter pub get
+# If fluttergen is not installed go here: https://pub.dev/packages/flutter_gen
+$ fluttergen
+# If language files were not generated
+$ flutter pub run intl_utils:generate
+
+# Run the app finally
 $ flutter run -d macos
 ```
