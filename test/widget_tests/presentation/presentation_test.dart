@@ -6,13 +6,14 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:fluttercon_2023_presentation/main.dart';
+
 import 'package:fluttercon_2023_presentation/presentation/view/presentation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  testWidgets('Increments counter', (tester) async {
-    await tester.pumpWidget(const MyPresentation());
+  testWidgets('Presentation test', (tester) async {
+    await tester.pumpWidget(const ProviderScope(child: MyPresentation()));
 
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
