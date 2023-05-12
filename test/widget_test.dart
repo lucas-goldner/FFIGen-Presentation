@@ -8,10 +8,10 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:fluttercon_2023_presentation/main.dart';
-import 'package:fluttercon_2023_presentation/presentation.dart';
+import 'package:fluttercon_2023_presentation/presentation/view/presentation.dart';
 
 void main() {
-  testWidgets('Increments counter', (WidgetTester tester) async {
+  testWidgets('Increments counter', (tester) async {
     await tester.pumpWidget(const MyPresentation());
 
     expect(find.text('0'), findsOneWidget);
