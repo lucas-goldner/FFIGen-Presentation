@@ -12,13 +12,15 @@ analyzer:
   errors:
     invalid_annotation_target: ignore
     public_member_api_docs: ignore
+    invalid_use_of_protected_member: ignore
   exclude:
     - "lib/generated/**"
-    - "test/**"
 
 dart_code_metrics:
   anti-patterns:
-    - long-method
+    - long-method:
+        exclude:
+          - test/**
     - long-parameter-list
   metrics:
     cyclomatic-complexity: 20

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
-import 'package:fluttercon_2023_presentation/presentation/view/presentation.dart';
+import 'package:fluttercon_2023_presentation/main.dart';
 
 Widget makeDefaultTestableWidget() => CupertinoApp(
       key: const Key('MainApp'),
-      home: const Presentation(),
+      home: const MyPresentation(),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         S.delegate,

@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 import 'package:fluttercon_2023_presentation/styles/transitions/page_directional_animations.dart';
 
 class DirectionalAnimation extends StatefulWidget {
