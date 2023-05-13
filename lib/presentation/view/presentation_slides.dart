@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:fluttercon_2023_presentation/presentation/model/enum/key_actions.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/pages_of_presentation.dart';
-
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -18,24 +18,25 @@ class PresentationSlides extends HookConsumerWidget {
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
       if (event is RawKeyDownEvent && !keyPressed.value) {
-        switch (event.physicalKey) {
-          case PhysicalKeyboardKey.keyA:
-          case PhysicalKeyboardKey.arrowLeft:
-            ref
-                .read<PresentationController>(presentationController.notifier)
-                .toLastPage();
-            keyPressed.value = true;
-            return KeyEventResult.handled;
-          case PhysicalKeyboardKey.keyD:
-          case PhysicalKeyboardKey.arrowRight:
-            ref
-                .read<PresentationController>(presentationController.notifier)
-                .nextPage();
-            keyPressed.value = true;
-            return KeyEventResult.handled;
-          default:
-            return KeyEventResult.ignored;
+        if (KeyActions.goToLastSlide.keybindings
+            .any((key) => key == event.physicalKey)) {
+          ref
+              .read<PresentationController>(presentationController.notifier)
+              .toLastPage();
+          keyPressed.value = true;
+          return KeyEventResult.handled;
         }
+
+        if (KeyActions.goNextSlide.keybindings
+            .any((key) => key == event.physicalKey)) {
+          ref
+              .read<PresentationController>(presentationController.notifier)
+              .nextPage();
+          keyPressed.value = true;
+          return KeyEventResult.handled;
+        }
+
+        return KeyEventResult.ignored;
       } else if (event is RawKeyUpEvent) {
         keyPressed.value = false;
       }
