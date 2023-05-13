@@ -21,4 +21,4 @@ jobs:
       - run: flutter pub run intl_utils:generate
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build macos --release --no-codesign --flavor prod -t lib/flavor/main_prod.dart
+      - run: flutter build macos --release
