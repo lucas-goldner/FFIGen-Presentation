@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/pages_of_presentation.dart';
 
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
@@ -10,22 +12,62 @@ class PresentationSlides extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final focusNode = FocusNode();
     final presentation = ref.watch(presentationController);
+    final keyPressed = useState(false);
 
-    return GestureDetector(
-      onTap: () => ref
+    KeyEventResult handleKeyEvent(RawKeyEvent event) {
+      if (event is RawKeyDownEvent && !keyPressed.value) {
+        switch (event.physicalKey) {
+          case PhysicalKeyboardKey.keyA:
+          case PhysicalKeyboardKey.arrowLeft:
+            ref
+                .read<PresentationController>(presentationController.notifier)
+                .toLastPage();
+            keyPressed.value = true;
+            return KeyEventResult.handled;
+          case PhysicalKeyboardKey.keyD:
+          case PhysicalKeyboardKey.arrowRight:
+            ref
+                .read<PresentationController>(presentationController.notifier)
+                .nextPage();
+            keyPressed.value = true;
+            return KeyEventResult.handled;
+          default:
+            return KeyEventResult.ignored;
+        }
+      } else if (event is RawKeyUpEvent) {
+        keyPressed.value = false;
+      }
+      return KeyEventResult.ignored;
+    }
+
+    void onSlidePress() {
+      if (!focusNode.hasFocus) {
+        FocusScope.of(context).requestFocus(focusNode);
+      }
+
+      ref
           .read<PresentationController>(presentationController.notifier)
-          .nextPage(),
-      onSecondaryTap: () => ref
-          .read<PresentationController>(presentationController.notifier)
-          .toLastPage(),
-      child: CupertinoPageScaffold(
-        backgroundColor: Colors.white,
-        child: PageView.builder(
-          itemCount: PagesOfPresentation.values.length,
-          controller: PageController(),
-          itemBuilder: (context, index) =>
-              PagesOfPresentation.values[presentation.page].slide,
+          .nextPage();
+    }
+
+    return RawKeyboardListener(
+      focusNode: focusNode,
+      onKey: handleKeyEvent,
+      child: GestureDetector(
+        onTap: onSlidePress,
+        onSecondaryTap: () => ref
+            .read<PresentationController>(presentationController.notifier)
+            .toLastPage(),
+        child: CupertinoPageScaffold(
+          backgroundColor: Colors.white,
+          child: PageView.builder(
+            itemCount: PagesOfPresentation.values.length,
+            controller: PageController(),
+            itemBuilder: (context, index) =>
+                PagesOfPresentation.values[presentation.page].slide,
+          ),
         ),
       ),
     );

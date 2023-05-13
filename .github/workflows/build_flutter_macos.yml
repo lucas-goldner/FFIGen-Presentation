@@ -19,7 +19,6 @@ jobs:
       - run: dart pub global activate flutter_gen
       - run: fluttergen
       - run: flutter pub run intl_utils:generate
-      - run: flutter pub run build_runner build --delete-conflicting-outputs
       - run: flutter analyze
       - run: flutter test
       - run: flutter build macos --release --no-codesign --flavor prod -t lib/flavor/main_prod.dart
