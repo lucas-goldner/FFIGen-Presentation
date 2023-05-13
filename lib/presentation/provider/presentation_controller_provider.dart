@@ -6,8 +6,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class PresentationController extends StateNotifier<Presentation> {
   PresentationController() : super(const Presentation(0, Locale('en')));
 
-  void nextPage() => state = state.page == PagesOfPresentation.values.length
-      ? state.copyWith(page: PagesOfPresentation.values.length)
+  void nextPage() => state = state.page == PagesOfPresentation.values.length - 1
+      ? state.copyWith(page: PagesOfPresentation.values.length - 1)
       : state.copyWith(page: state.page + 1);
 
   void toLastPage() => state = state.page == 0
