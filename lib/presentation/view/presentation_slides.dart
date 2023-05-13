@@ -2,18 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
-import 'package:fluttercon_2023_presentation/presentation/provider/counter_provider.dart';
+import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Presentation extends HookConsumerWidget {
-  const Presentation({super.key});
+class PresentationSlides extends HookConsumerWidget {
+  const PresentationSlides({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider);
+    final presentation = ref.watch(presentationController);
 
     return GestureDetector(
-      onTap: () => ref.read<Counter>(counterProvider.notifier).increment(),
+      onTap: () => ref
+          .read<PresentationController>(presentationController.notifier)
+          .nextPage(),
       child: CupertinoPageScaffold(
         child: Center(
           child: Column(
@@ -23,7 +25,7 @@ class Presentation extends HookConsumerWidget {
                 S.of(context).flutterTitle,
               ),
               Text(
-                '$counter',
+                '${presentation.page}',
                 style: const TextStyle(color: Colors.white),
               ),
             ],
