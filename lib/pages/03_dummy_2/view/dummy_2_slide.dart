@@ -7,10 +7,10 @@ class DummySlideTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadeAnimation(
-      delay: 1,
-      child: Container(
+      Container(
         color: Colors.yellow,
       ),
+      100,
     );
   }
 }

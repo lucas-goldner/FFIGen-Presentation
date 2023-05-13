@@ -2,14 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'package:fluttercon_2023_presentation/styles/transitions/page_directional_animations.dart';
+
 class DirectionalAnimation extends StatefulWidget {
-  const DirectionalAnimation({
-    required this.child,
-    required this.delay,
+  const DirectionalAnimation(
+    this.child,
+    this.delay,
+    this.animation, {
+    Curve? curve,
     super.key,
-  });
+  }) : _curve = curve ?? Curves.bounceIn;
   final Widget child;
   final int delay;
+  final Curve _curve;
+  final PageDirectionalAnimations animation;
 
   @override
   DirectionalAnimState createState() => DirectionalAnimState();
@@ -31,14 +37,13 @@ class DirectionalAnimState extends State<DirectionalAnimation>
     );
     _animController = animationController;
     final curve = CurvedAnimation(
-      curve: Curves.decelerate,
+      curve: widget._curve,
       parent: animationController,
     );
 
-    // Modify the _animOffset to make it slide from left to right
-    _animOffset = Tween<Offset>(begin: const Offset(-1, 0), end: Offset.zero)
-        .animate(curve);
-
+    _animOffset =
+        Tween<Offset>(begin: widget.animation.offset, end: Offset.zero)
+            .animate(curve);
     _timer = Timer(Duration(milliseconds: widget.delay), _animate);
   }
 
@@ -61,12 +66,9 @@ class DirectionalAnimState extends State<DirectionalAnimation>
       return widget.child;
     }
 
-    return FadeTransition(
-      opacity: animationController,
-      child: SlideTransition(
-        position: animOffset,
-        child: widget.child,
-      ),
+    return SlideTransition(
+      position: animOffset,
+      child: widget.child,
     );
   }
 }

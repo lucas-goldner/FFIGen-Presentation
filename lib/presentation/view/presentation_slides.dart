@@ -16,6 +16,9 @@ class PresentationSlides extends HookConsumerWidget {
       onTap: () => ref
           .read<PresentationController>(presentationController.notifier)
           .nextPage(),
+      onSecondaryTap: () => ref
+          .read<PresentationController>(presentationController.notifier)
+          .toLastPage(),
       child: CupertinoPageScaffold(
         backgroundColor: Colors.white,
         child: PageView.builder(
