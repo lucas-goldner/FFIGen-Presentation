@@ -27,10 +27,10 @@ dev_dependencies:
   very_good_analysis: ^4.0.0+1
 
 flutter:
-  assets:
-    - assets/audio/
-    - assets/fonts/
-    - assets/images/
+  # assets:
+  #   - assets/audio/
+  #   - assets/fonts/
+  #   - assets/images/
 
   # fonts:
   #   - family: Schyler
