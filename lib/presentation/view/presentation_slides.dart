@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/pages_of_presentation.dart';
 
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
@@ -16,7 +17,13 @@ class PresentationSlides extends HookConsumerWidget {
           .read<PresentationController>(presentationController.notifier)
           .nextPage(),
       child: CupertinoPageScaffold(
-        child: PagesOfPresentation.values.elementAt(presentation.page).slide,
+        backgroundColor: Colors.white,
+        child: PageView.builder(
+          itemCount: PagesOfPresentation.values.length,
+          controller: PageController(),
+          itemBuilder: (context, index) =>
+              PagesOfPresentation.values[presentation.page].slide,
+        ),
       ),
     );
   }
