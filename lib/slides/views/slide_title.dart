@@ -1,16 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
+import 'package:fluttercon_2023_presentation/pages/01_title/widgets/title_slide_overlay.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_body.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_footer.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/footer_text.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/regular_text.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/title.dart';
-
 import 'package:fluttercon_2023_presentation/styles/fc_gradients.dart';
-
-import 'package:fluttercon_2023_presentation/pages/01_title/widgets/title_slide_overlay.dart';
 
 class SlideTitle extends StatelessWidget {
   const SlideTitle({
@@ -33,16 +31,18 @@ class SlideTitle extends StatelessWidget {
                 Column(
                   children: [
                     const Spacer(),
-                    TextTitle(S.of(context).presentationTitle)
-                        .animate(
-                          onPlay: (controller) =>
-                              controller.repeat(reverse: true),
-                        )
-                        .shimmer(
-                          duration:
-                              const Duration(seconds: 2, milliseconds: 500),
-                          colors: FCGradients.animatedTitlePrimary.colors,
-                        )
+                    Flexible(
+                      child: TextTitle(S.of(context).presentationTitle)
+                          .animate(
+                            onPlay: (controller) =>
+                                controller.repeat(reverse: true),
+                          )
+                          .shimmer(
+                            duration:
+                                const Duration(seconds: 2, milliseconds: 500),
+                            colors: FCGradients.animatedTitlePrimary.colors,
+                          ),
+                    )
                   ],
                 ),
                 flexUnits: 3,
@@ -50,11 +50,10 @@ class SlideTitle extends StatelessWidget {
               LayoutBody(
                 Column(
                   children: [
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Center(
-                      child: RegularText(S.of(context).presentationSubtitle),
+                    Flexible(
+                      child: Center(
+                        child: RegularText(S.of(context).presentationSubtitle),
+                      ),
                     ),
                     const Spacer(),
                   ],

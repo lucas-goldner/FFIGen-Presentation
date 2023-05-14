@@ -29,6 +29,7 @@ void main() {
 
   testWidgets('test render main test', (tester) async {
     await tester.pumpWidget(ProviderScope(child: makeTestableWidget()));
+    await tester.pump(const Duration(seconds: 1));
     expect(find.byType(MyPresentation), findsOneWidget);
     expect(find.text(S.of(buildContext).presentationTitle), findsOneWidget);
   });

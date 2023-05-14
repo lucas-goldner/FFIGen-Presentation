@@ -13,9 +13,18 @@ class PresentationSlides extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final focusNode = FocusNode();
-    final presentation = ref.watch(presentationController);
     final keyPressed = useState(false);
     final pageController = useState(PageController());
+
+    void toNextPage() {
+      ref
+          .read<PresentationController>(presentationController.notifier)
+          .nextPage();
+      pageController.value.nextPage(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
+    }
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
       if (event is RawKeyDownEvent && !keyPressed.value) {
@@ -34,13 +43,7 @@ class PresentationSlides extends HookConsumerWidget {
 
         if (KeyActions.goNextSlide.keybindings
             .any((key) => key == event.physicalKey)) {
-          ref
-              .read<PresentationController>(presentationController.notifier)
-              .nextPage();
-          pageController.value.nextPage(
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.ease,
-          );
+          toNextPage();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -57,9 +60,7 @@ class PresentationSlides extends HookConsumerWidget {
         FocusScope.of(context).requestFocus(focusNode);
       }
 
-      ref
-          .read<PresentationController>(presentationController.notifier)
-          .nextPage();
+      toNextPage();
     }
 
     return RawKeyboardListener(
