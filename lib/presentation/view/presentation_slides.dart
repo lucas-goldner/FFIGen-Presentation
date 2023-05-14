@@ -15,6 +15,7 @@ class PresentationSlides extends HookConsumerWidget {
     final focusNode = FocusNode();
     final presentation = ref.watch(presentationController);
     final keyPressed = useState(false);
+    final pageController = useState(PageController());
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
       if (event is RawKeyDownEvent && !keyPressed.value) {
@@ -23,6 +24,10 @@ class PresentationSlides extends HookConsumerWidget {
           ref
               .read<PresentationController>(presentationController.notifier)
               .toLastPage();
+          pageController.value.previousPage(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.ease,
+          );
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -32,6 +37,10 @@ class PresentationSlides extends HookConsumerWidget {
           ref
               .read<PresentationController>(presentationController.notifier)
               .nextPage();
+          pageController.value.nextPage(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.ease,
+          );
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -65,7 +74,7 @@ class PresentationSlides extends HookConsumerWidget {
           backgroundColor: Colors.white,
           child: PageView.builder(
             itemCount: PagesOfPresentation.values.length,
-            controller: PageController(),
+            controller: pageController.value,
             itemBuilder: (context, index) =>
                 PagesOfPresentation.values[index].slide,
           ),
