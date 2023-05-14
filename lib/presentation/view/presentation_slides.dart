@@ -67,7 +67,7 @@ class PresentationSlides extends HookConsumerWidget {
             itemCount: PagesOfPresentation.values.length,
             controller: PageController(),
             itemBuilder: (context, index) =>
-                PagesOfPresentation.values[presentation.page].slide,
+                PagesOfPresentation.values[index].slide,
           ),
         ),
       ),

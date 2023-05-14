@@ -1,6 +1,16 @@
 import 'package:flutter/cupertino.dart';
 
 class FCGradients {
+  static const LinearGradient animatedTitlePrimary = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      CupertinoColors.systemIndigo,
+      CupertinoColors.systemPurple,
+      CupertinoColors.systemPink,
+    ],
+  );
+
   static const LinearGradient titlePrimary = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,

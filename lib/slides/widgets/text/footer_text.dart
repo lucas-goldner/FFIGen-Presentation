@@ -8,16 +8,20 @@ class FooterText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.fontWeight,
+    this.textAlignment,
   });
+
   final String footerText;
   final Color? color;
   final double? fontSize;
   final FontWeight? fontWeight;
+  final TextAlign? textAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       footerText,
+      textAlign: textAlignment ?? TextAlign.center,
       style: FCTextStyles.footerText(
         color: color,
         fontSize: fontSize,

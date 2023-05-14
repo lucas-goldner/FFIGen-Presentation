@@ -3,7 +3,7 @@ import 'package:fluttercon_2023_presentation/generated/fonts.gen.dart';
 
 class FCTextStyles {
   static TextStyle title({Color? color, double? fontSize}) => TextStyle(
-        fontSize: fontSize ?? 116,
+        fontSize: fontSize ?? 96,
         fontWeight: FontWeight.w600,
         fontFamily: FontFamily.graphik,
         color: color ?? CupertinoColors.black,
@@ -15,7 +15,7 @@ class FCTextStyles {
     FontWeight? fontWeight,
   }) =>
       TextStyle(
-        fontSize: fontSize ?? 64,
+        fontSize: fontSize ?? 52,
         fontWeight: fontWeight ?? FontWeight.w500,
         fontFamily: FontFamily.graphik,
         color: color ?? const Color.fromARGB(255, 18, 24, 38),
@@ -27,7 +27,7 @@ class FCTextStyles {
     FontWeight? fontWeight,
   }) =>
       TextStyle(
-        fontSize: fontSize ?? 32,
+        fontSize: fontSize ?? 24,
         fontWeight: fontWeight ?? FontWeight.w500,
         fontFamily: FontFamily.graphik,
         color: color ?? const Color.fromARGB(255, 18, 24, 38),
