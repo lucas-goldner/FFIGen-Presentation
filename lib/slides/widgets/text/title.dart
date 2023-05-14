@@ -11,8 +11,8 @@ class TextTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return GradientText(
       titleText,
-      gradient: FCGradients.backgroundPrimary.gradient,
-      style: FCTextStyles.title.style,
+      gradient: FCGradients.titlePrimary,
+      style: FCTextStyles.title(),
     );
   }
 }

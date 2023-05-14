@@ -1,20 +1,24 @@
 import 'package:flutter/cupertino.dart';
 
-enum FCGradients {
-  backgroundPrimary(
-    LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        CupertinoColors.systemTeal,
-        CupertinoColors.systemIndigo,
-        CupertinoColors.systemPurple,
-        CupertinoColors.systemPink,
-      ],
-    ),
+class FCGradients {
+  static const LinearGradient titlePrimary = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      CupertinoColors.systemTeal,
+      CupertinoColors.systemIndigo,
+      CupertinoColors.systemPurple,
+      CupertinoColors.systemPink,
+    ],
   );
 
-  const FCGradients(this.gradient);
-
-  final Gradient gradient;
+  static const LinearGradient backgroundPrimary = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      CupertinoColors.systemBackground,
+      Color.fromARGB(255, 205, 220, 246),
+    ],
+    stops: [0.5, 1.0],
+  );
 }

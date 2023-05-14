@@ -1,16 +1,35 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttercon_2023_presentation/generated/fonts.gen.dart';
 
-enum FCTextStyles {
-  title(
-    TextStyle(
-      fontSize: 116,
-      fontWeight: FontWeight.w600,
-      fontFamily: FontFamily.graphik,
-    ),
-  );
+class FCTextStyles {
+  static TextStyle title({Color? color, double? fontSize}) => TextStyle(
+        fontSize: fontSize ?? 116,
+        fontWeight: FontWeight.w600,
+        fontFamily: FontFamily.graphik,
+        color: color ?? CupertinoColors.black,
+      );
 
-  const FCTextStyles(this.style);
+  static TextStyle regularText({
+    Color? color,
+    double? fontSize,
+    FontWeight? fontWeight,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 64,
+        fontWeight: fontWeight ?? FontWeight.w500,
+        fontFamily: FontFamily.graphik,
+        color: color ?? const Color.fromARGB(255, 18, 24, 38),
+      );
 
-  final TextStyle style;
+  static TextStyle footerText({
+    Color? color,
+    double? fontSize,
+    FontWeight? fontWeight,
+  }) =>
+      TextStyle(
+        fontSize: fontSize ?? 32,
+        fontWeight: fontWeight ?? FontWeight.w500,
+        fontFamily: FontFamily.graphik,
+        color: color ?? const Color.fromARGB(255, 18, 24, 38),
+      );
 }

@@ -3,6 +3,8 @@ import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_body.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_footer.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
+import 'package:fluttercon_2023_presentation/slides/widgets/text/footer_text.dart';
+import 'package:fluttercon_2023_presentation/slides/widgets/text/regular_text.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/title.dart';
 
 class SlideTitle extends StatelessWidget {
@@ -31,15 +33,24 @@ class SlideTitle extends StatelessWidget {
           flexUnits: 3,
         ),
         LayoutBody(
-          const Column(
+          Column(
             children: [
-              Center(child: Text('Body')),
-              Spacer(),
+              const SizedBox(
+                height: 12,
+              ),
+              Center(
+                child: RegularText(S.of(context).presentationSubtitle),
+              ),
+              const Spacer(),
             ],
           ),
           flexUnits: 2,
         ),
-        LayoutFooter(const Center(child: Text('Footer'))),
+        LayoutFooter(
+          Center(
+            child: FooterText(S.of(context).presentationFooter),
+          ),
+        ),
       ],
     );
   }
