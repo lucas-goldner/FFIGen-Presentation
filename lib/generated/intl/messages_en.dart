@@ -22,7 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "flutterTitle": MessageLookupByLibrary.simpleMessage(
-            "Fluttercon 2023 - Lucas Goldner")
+        "presentationFooter":
+            MessageLookupByLibrary.simpleMessage("Lucas Goldner, 10.05.2023"),
+        "presentationSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Comparing ways of accessing native functions"),
+        "presentationTitle":
+            MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?")
       };
 }

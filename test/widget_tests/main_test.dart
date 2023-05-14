@@ -30,6 +30,6 @@ void main() {
   testWidgets('test render main test', (tester) async {
     await tester.pumpWidget(ProviderScope(child: makeTestableWidget()));
     expect(find.byType(MyPresentation), findsOneWidget);
-    expect(find.text(S.of(buildContext).flutterTitle), findsOneWidget);
+    expect(find.text(S.of(buildContext).presentationTitle), findsOneWidget);
   });
 }

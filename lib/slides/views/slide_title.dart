@@ -1,7 +1,9 @@
 import 'package:flutter/widgets.dart';
+import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_body.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_footer.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
+import 'package:fluttercon_2023_presentation/slides/widgets/text/title.dart';
 
 class SlideTitle extends StatelessWidget {
   const SlideTitle({
@@ -20,10 +22,23 @@ class SlideTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         LayoutHeader(
-          const Center(child: Text('Header')),
-          flexUnits: 1,
+          Column(
+            children: [
+              const Spacer(),
+              TextTitle(S.of(context).presentationTitle)
+            ],
+          ),
+          flexUnits: 3,
         ),
-        LayoutBody(const Center(child: Text('Body'))),
+        LayoutBody(
+          const Column(
+            children: [
+              Center(child: Text('Body')),
+              Spacer(),
+            ],
+          ),
+          flexUnits: 2,
+        ),
         LayoutFooter(const Center(child: Text('Footer'))),
       ],
     );

@@ -9,8 +9,26 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
+
+  /// File path: assets/fonts/GraphikMedium.otf
+  String get graphikMedium => 'assets/fonts/GraphikMedium.otf';
+
+  /// File path: assets/fonts/GraphikRegular.otf
+  String get graphikRegular => 'assets/fonts/GraphikRegular.otf';
+
+  /// File path: assets/fonts/GraphikSemibold.otf
+  String get graphikSemibold => 'assets/fonts/GraphikSemibold.otf';
+
+  /// List of all assets
+  List<String> get values => [graphikMedium, graphikRegular, graphikSemibold];
+}
+
 class Assets {
   Assets._();
+
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
 }
 
 class AssetGenImage {
