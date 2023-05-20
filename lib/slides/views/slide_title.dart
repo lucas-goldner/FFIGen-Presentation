@@ -1,8 +1,7 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/pages/01_title/widgets/title_slide_overlay.dart';
-import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_body.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_footer.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/footer_text.dart';
@@ -32,7 +31,7 @@ class SlideTitle extends StatelessWidget {
                   children: [
                     const Spacer(),
                     Flexible(
-                      child: TextTitle(S.of(context).presentationTitle)
+                      child: TextTitle(titleText)
                           .animate(
                             onPlay: (controller) =>
                                 controller.repeat(reverse: true),
@@ -42,28 +41,30 @@ class SlideTitle extends StatelessWidget {
                                 const Duration(seconds: 2, milliseconds: 500),
                             colors: FCGradients.animatedTitlePrimary.colors,
                           ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Center(
+                      child: RegularText(subTitleText ?? ''),
+                    ),
+                  ],
+                ),
+                flexUnits: 8,
+              ),
+              LayoutFooter(
+                Column(
+                  children: [
+                    const Spacer(),
+                    Center(
+                      child: FooterText(S.of(context).presentationFooter),
+                    ),
+                    const SizedBox(
+                      height: 40,
                     )
                   ],
                 ),
-                flexUnits: 3,
-              ),
-              LayoutBody(
-                Column(
-                  children: [
-                    Flexible(
-                      child: Center(
-                        child: RegularText(S.of(context).presentationSubtitle),
-                      ),
-                    ),
-                    const Spacer(),
-                  ],
-                ),
                 flexUnits: 2,
-              ),
-              LayoutFooter(
-                Center(
-                  child: FooterText(S.of(context).presentationFooter),
-                ),
               ),
             ],
           ),
