@@ -34,6 +34,7 @@ flutter:
     - assets/images/shared/
     - assets/images/title_slide/
     - assets/images/title_and_photo_slide/
+    - assets/images/title_and_photo_slide_alt/
   #   - assets/audio/
 
   fonts:

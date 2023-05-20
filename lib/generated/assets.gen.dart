@@ -33,6 +33,8 @@ class $AssetsImagesGen {
   $AssetsImagesSharedGen get shared => const $AssetsImagesSharedGen();
   $AssetsImagesTitleAndPhotoSlideGen get titleAndPhotoSlide =>
       const $AssetsImagesTitleAndPhotoSlideGen();
+  $AssetsImagesTitleAndPhotoSlideAltGen get titleAndPhotoSlideAlt =>
+      const $AssetsImagesTitleAndPhotoSlideAltGen();
   $AssetsImagesTitleSlideGen get titleSlide =>
       const $AssetsImagesTitleSlideGen();
 }
@@ -55,12 +57,23 @@ class $AssetsImagesSharedGen {
 class $AssetsImagesTitleAndPhotoSlideGen {
   const $AssetsImagesTitleAndPhotoSlideGen();
 
-  /// File path: assets/images/title_and_photo_slide/title_and_photo_image.png
-  AssetGenImage get titleAndPhotoImage => const AssetGenImage(
-      'assets/images/title_and_photo_slide/title_and_photo_image.png');
+  /// File path: assets/images/title_and_photo_slide/title_and_photo.png
+  AssetGenImage get titleAndPhoto => const AssetGenImage(
+      'assets/images/title_and_photo_slide/title_and_photo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [titleAndPhotoImage];
+  List<AssetGenImage> get values => [titleAndPhoto];
+}
+
+class $AssetsImagesTitleAndPhotoSlideAltGen {
+  const $AssetsImagesTitleAndPhotoSlideAltGen();
+
+  /// File path: assets/images/title_and_photo_slide_alt/title_and_photo_image_alt.png
+  AssetGenImage get titleAndPhotoImageAlt => const AssetGenImage(
+      'assets/images/title_and_photo_slide_alt/title_and_photo_image_alt.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [titleAndPhotoImageAlt];
 }
 
 class $AssetsImagesTitleSlideGen {
