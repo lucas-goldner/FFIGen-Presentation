@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/pages/01_title/widgets/title_slide_overlay.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_footer.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
@@ -57,7 +56,7 @@ class SlideTitle extends StatelessWidget {
                   children: [
                     const Spacer(),
                     Center(
-                      child: FooterText(S.of(context).presentationFooter),
+                      child: FooterText(footerText ?? ''),
                     ),
                     const SizedBox(
                       height: 40,

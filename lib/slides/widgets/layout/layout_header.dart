@@ -3,15 +3,15 @@ import 'package:fluttercon_2023_presentation/slides/model/enum/layout_flex_units
 
 class LayoutHeader extends StatelessWidget {
   LayoutHeader(this.widget, {int? flexUnits, super.key})
-      : _flexUnits = flexUnits ?? LayoutFlexUnits.header.flexUnits;
+      : layoutFlexUnits = flexUnits ?? LayoutFlexUnits.header.flexUnits;
 
   final Widget widget;
-  final int _flexUnits;
+  final int layoutFlexUnits;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: _flexUnits,
+      flex: layoutFlexUnits,
       child: widget,
     );
   }

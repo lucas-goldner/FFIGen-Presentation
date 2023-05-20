@@ -7,15 +7,14 @@ class TitleSlide extends StatelessWidget {
   const TitleSlide({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: const BoxDecoration(
-        gradient: FCGradients.backgroundPrimary,
-      ),
-      child: SlideTitle(
-        titleText: S.of(context).presentationTitle,
-        subTitleText: S.of(context).presentationSubtitle,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => DecoratedBox(
+        decoration: const BoxDecoration(
+          gradient: FCGradients.backgroundPrimary,
+        ),
+        child: SlideTitle(
+          titleText: S.of(context).presentationTitle,
+          subTitleText: S.of(context).presentationSubtitle,
+          footerText: S.of(context).presentationFooter,
+        ),
+      );
 }
