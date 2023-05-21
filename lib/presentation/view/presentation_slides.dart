@@ -13,8 +13,18 @@ class PresentationSlides extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final focusNode = FocusNode();
-    final presentation = ref.watch(presentationController);
     final keyPressed = useState(false);
+    final pageController = useState(PageController());
+
+    void toNextPage() {
+      ref
+          .read<PresentationController>(presentationController.notifier)
+          .nextPage();
+      pageController.value.nextPage(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
+    }
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
       if (event is RawKeyDownEvent && !keyPressed.value) {
@@ -23,15 +33,17 @@ class PresentationSlides extends HookConsumerWidget {
           ref
               .read<PresentationController>(presentationController.notifier)
               .toLastPage();
+          pageController.value.previousPage(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.ease,
+          );
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
 
         if (KeyActions.goNextSlide.keybindings
             .any((key) => key == event.physicalKey)) {
-          ref
-              .read<PresentationController>(presentationController.notifier)
-              .nextPage();
+          toNextPage();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -48,9 +60,7 @@ class PresentationSlides extends HookConsumerWidget {
         FocusScope.of(context).requestFocus(focusNode);
       }
 
-      ref
-          .read<PresentationController>(presentationController.notifier)
-          .nextPage();
+      toNextPage();
     }
 
     return RawKeyboardListener(
@@ -65,9 +75,9 @@ class PresentationSlides extends HookConsumerWidget {
           backgroundColor: Colors.white,
           child: PageView.builder(
             itemCount: PagesOfPresentation.values.length,
-            controller: PageController(),
+            controller: pageController.value,
             itemBuilder: (context, index) =>
-                PagesOfPresentation.values[presentation.page].slide,
+                PagesOfPresentation.values[index].slide,
           ),
         ),
       ),

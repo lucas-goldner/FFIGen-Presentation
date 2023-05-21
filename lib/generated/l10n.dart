@@ -50,11 +50,31 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Fluttercon 2023 - Lucas Goldner`
-  String get flutterTitle {
+  /// `FFIGen - The solution ?`
+  String get presentationTitle {
     return Intl.message(
-      'Fluttercon 2023 - Lucas Goldner',
-      name: 'flutterTitle',
+      'FFIGen - The solution ?',
+      name: 'presentationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comparing ways of accessing native functions`
+  String get presentationSubtitle {
+    return Intl.message(
+      'Comparing ways of accessing native functions',
+      name: 'presentationSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lucas Goldner, 10.05.2023`
+  String get presentationFooter {
+    return Intl.message(
+      'Lucas Goldner, 10.05.2023',
+      name: 'presentationFooter',
       desc: '',
       args: [],
     );

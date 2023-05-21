@@ -1,3 +1,5 @@
 {
-  "flutterTitle": "Fluttercon 2023 - Lucas Goldner"
+  "presentationTitle": "FFIGen - The solution ?",
+  "presentationSubtitle": "Comparing ways of accessing native functions",
+  "presentationFooter": "Lucas Goldner, 10.05.2023"
 }
