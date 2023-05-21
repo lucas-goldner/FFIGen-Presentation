@@ -21,6 +21,7 @@ class DummySlideTwo extends StatelessWidget {
             'Dummy',
             const ['Option 1', 'Option 2', 'Option 3'],
             itemListdotted: true,
+            itemListtextAlign: TextAlign.start,
           ),
         ),
         100,

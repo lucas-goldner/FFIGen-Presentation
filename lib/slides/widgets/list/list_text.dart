@@ -10,23 +10,29 @@ class ListText extends StatelessWidget {
     this.fontWeight,
     this.textAlign,
     this.dotted,
+    this.padding,
   });
+
   final List<String> texts;
   final Color? color;
   final double? fontSize;
   final FontWeight? fontWeight;
   final TextAlign? textAlign;
   final bool? dotted;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) => ListView.builder(
         itemCount: texts.length,
-        itemBuilder: (context, index) => RegularText(
-          dotted ?? false ? '\u2022 ${texts[index]}' : texts[index],
-          color: color,
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          textAlign: textAlign,
+        itemBuilder: (context, index) => Padding(
+          padding: padding ?? EdgeInsets.zero,
+          child: RegularText(
+            dotted ?? false ? '\u2022 ${texts[index]}' : texts[index],
+            color: color,
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+            textAlign: textAlign,
+          ),
         ),
       );
 }

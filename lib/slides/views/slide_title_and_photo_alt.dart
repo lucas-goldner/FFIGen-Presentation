@@ -15,6 +15,7 @@ class SlideTitleAndPhotoAlt extends StatelessWidget {
     this.itemListfontWeight,
     this.itemListtextAlign,
     this.itemListdotted,
+    this.itemsPadding,
   });
 
   final Image image;
@@ -25,6 +26,7 @@ class SlideTitleAndPhotoAlt extends StatelessWidget {
   final FontWeight? itemListfontWeight;
   final TextAlign? itemListtextAlign;
   final bool? itemListdotted;
+  final EdgeInsets? itemsPadding;
 
   @override
   Widget build(BuildContext context) => Row(
@@ -46,8 +48,12 @@ class SlideTitleAndPhotoAlt extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 40, top: 40),
                     child: ListText(
                       items,
-                      textAlign: TextAlign.start,
-                      dotted: true,
+                      color: itemListTextcolor,
+                      fontSize: itemListfontSize,
+                      fontWeight: itemListfontWeight,
+                      textAlign: itemListtextAlign,
+                      dotted: itemListdotted,
+                      padding: itemsPadding,
                     ),
                   ),
                 ),
