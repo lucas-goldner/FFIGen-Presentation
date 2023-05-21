@@ -26,7 +26,7 @@ void main() {
     expect(find.byType(TitleSlide), findsOneWidget);
 
     await tester.tap(find.byType(PresentationSlides));
-    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await pumpTimer(tester);
 
     expect(find.byType(DummySlideOne), findsOneWidget);
   });
@@ -38,12 +38,12 @@ void main() {
     expect(find.byType(TitleSlide), findsOneWidget);
 
     await tester.tap(find.byType(PresentationSlides));
-    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await pumpTimer(tester);
 
     expect(find.byType(DummySlideOne), findsOneWidget);
 
     await simulateKeyEvent('d', LogicalKeyboardKey.keyD);
-    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await pumpTimer(tester);
 
     expect(find.byType(DummySlideTwo), findsOneWidget);
   });
@@ -56,7 +56,7 @@ void main() {
     expect(find.byType(TitleSlide), findsOneWidget);
 
     await tester.tap(find.byType(PresentationSlides));
-    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await pumpTimer(tester);
 
     expect(find.byType(DummySlideOne), findsOneWidget);
     await tester.pump(const Duration(seconds: 1));
