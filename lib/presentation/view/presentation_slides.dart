@@ -12,18 +12,14 @@ class PresentationSlides extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final pageController = ref.watch(presentationController).pageController;
     final focusNode = FocusNode();
     final keyPressed = useState(false);
-    final pageController = useState(PageController());
 
-    void toNextPage() {
+    void toNextItem() {
       ref
           .read<PresentationController>(presentationController.notifier)
-          .nextPage();
-      pageController.value.nextPage(
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.ease,
-      );
+          .goToNextItem();
     }
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
@@ -32,18 +28,14 @@ class PresentationSlides extends HookConsumerWidget {
             .any((key) => key == event.physicalKey)) {
           ref
               .read<PresentationController>(presentationController.notifier)
-              .toLastPage();
-          pageController.value.previousPage(
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.ease,
-          );
+              .toLastItem();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
 
         if (KeyActions.goNextSlide.keybindings
             .any((key) => key == event.physicalKey)) {
-          toNextPage();
+          toNextItem();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -60,7 +52,7 @@ class PresentationSlides extends HookConsumerWidget {
         FocusScope.of(context).requestFocus(focusNode);
       }
 
-      toNextPage();
+      toNextItem();
     }
 
     return RawKeyboardListener(
@@ -75,7 +67,7 @@ class PresentationSlides extends HookConsumerWidget {
           backgroundColor: Colors.white,
           child: PageView.builder(
             itemCount: PagesOfPresentation.values.length,
-            controller: pageController.value,
+            controller: pageController,
             itemBuilder: (context, index) =>
                 PagesOfPresentation.values[index].slide,
           ),
