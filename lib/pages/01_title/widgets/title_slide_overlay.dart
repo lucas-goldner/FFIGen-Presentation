@@ -15,9 +15,6 @@ class TitleSlideOverlay extends StatelessWidget {
         LayoutHeader(
           Row(
             children: [
-              // Assets.images.titleSlide.flutterconParticleCircle.svg(),
-              // ,
-              //,
               Padding(
                 padding: const EdgeInsets.only(left: 32),
                 child:
