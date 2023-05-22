@@ -5,8 +5,8 @@ import 'package:fluttercon_2023_presentation/slides/views/slide_title_and_photo.
 import 'package:fluttercon_2023_presentation/styles/fc_gradients.dart';
 import 'package:fluttercon_2023_presentation/styles/transitions/page_directional_animations.dart';
 
-class DummySlideOne extends StatelessWidget {
-  const DummySlideOne({super.key});
+class AgendaSlide extends StatelessWidget {
+  const AgendaSlide({super.key});
 
   @override
   Widget build(BuildContext context) => DirectionalAnimation(

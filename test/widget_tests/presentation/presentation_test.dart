@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttercon_2023_presentation/main.dart';
 import 'package:fluttercon_2023_presentation/pages/01_title/view/title_slide.dart';
-import 'package:fluttercon_2023_presentation/pages/02_dummy_1/view/dummy_1_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/02_agenda/view/agenda_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/03_dummy_2/view/dummy_2_slide.dart';
 import 'package:fluttercon_2023_presentation/presentation/view/presentation_slides.dart';
 
@@ -28,7 +28,7 @@ void main() {
     await tester.tap(find.byType(PresentationSlides));
     await pumpTimer(tester);
 
-    expect(find.byType(DummySlideOne), findsOneWidget);
+    expect(find.byType(AgendaSlide), findsOneWidget);
   });
 
   testWidgets('Test presentation navigation with D key', (tester) async {
@@ -40,7 +40,7 @@ void main() {
     await tester.tap(find.byType(PresentationSlides));
     await pumpTimer(tester);
 
-    expect(find.byType(DummySlideOne), findsOneWidget);
+    expect(find.byType(AgendaSlide), findsOneWidget);
 
     await simulateKeyEvent('d', LogicalKeyboardKey.keyD);
     await pumpTimer(tester);
@@ -58,7 +58,7 @@ void main() {
     await tester.tap(find.byType(PresentationSlides));
     await pumpTimer(tester);
 
-    expect(find.byType(DummySlideOne), findsOneWidget);
+    expect(find.byType(AgendaSlide), findsOneWidget);
     await tester.pump(const Duration(seconds: 1));
 
     await simulateKeyEvent('a', LogicalKeyboardKey.keyA);
