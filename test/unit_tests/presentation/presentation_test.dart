@@ -1,18 +1,17 @@
-import 'dart:ui';
-
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/presentation.dart';
 
 void main() {
   group('Test presentation model', () {
     test('test presentation copyWith page', () {
-      const pre = Presentation(0, 0, Locale('en'));
+      final pre = Presentation(0, 0, const Locale('en'), PageController());
 
       expect(1, pre.copyWith(page: 1).page);
     });
 
     test('test presentation copyWith locale', () {
-      const pre = Presentation(0, 0, Locale('en'));
+      final pre = Presentation(0, 0, const Locale('en'), PageController());
 
       expect(
         const Locale('de').languageCode,
@@ -21,7 +20,7 @@ void main() {
     });
 
     test('test presentation copyWith entire presentation', () {
-      const pre = Presentation(0, 0, Locale('en'));
+      final pre = Presentation(0, 0, const Locale('en'), PageController());
       final newPre = pre.copyWith(page: 1, locale: const Locale('de'));
 
       expect(
@@ -33,7 +32,7 @@ void main() {
   });
 
   test('test presentation copyWith itemIndex', () {
-    const pre = Presentation(0, 0, Locale('en'));
+    final pre = Presentation(0, 0, const Locale('en'), PageController());
 
     expect(
       2,
