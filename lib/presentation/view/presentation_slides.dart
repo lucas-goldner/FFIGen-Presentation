@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/key_actions.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/pages_of_presentation.dart';
+import 'package:fluttercon_2023_presentation/presentation/provider/airpods_data_provider.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -17,6 +18,12 @@ class PresentationSlides extends HookConsumerWidget {
     final keyPressed = useState(false);
 
     void toNextItem() {
+      if (pageController.page == 0.0) {
+        ref
+            .read<AirpodsDataProvider>(airpodsDataProvider.notifier)
+            .initializeConnection();
+      }
+
       ref
           .read<PresentationController>(presentationController.notifier)
           .goToNextItem();
