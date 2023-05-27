@@ -42,8 +42,14 @@ class $AssetsImagesGen {
 class $AssetsModelGen {
   const $AssetsModelGen();
 
-  /// File path: assets/model/file.obj
-  String get file => 'assets/model/file.obj';
+  /// File path: assets/model/dash.blend
+  String get dashBlend => 'assets/model/dash.blend';
+
+  /// File path: assets/model/dash.mtl
+  String get dashMtl => 'assets/model/dash.mtl';
+
+  /// File path: assets/model/dash.obj
+  String get dashObj => 'assets/model/dash.obj';
 
   /// File path: assets/model/shark.mtl
   String get sharkMtl => 'assets/model/shark.mtl';
@@ -56,7 +62,8 @@ class $AssetsModelGen {
       const AssetGenImage('assets/model/sharkTxt.png');
 
   /// List of all assets
-  List<dynamic> get values => [file, sharkMtl, sharkObj, sharkTxt];
+  List<dynamic> get values =>
+      [dashBlend, dashMtl, dashObj, sharkMtl, sharkObj, sharkTxt];
 }
 
 class $AssetsImagesSharedGen {

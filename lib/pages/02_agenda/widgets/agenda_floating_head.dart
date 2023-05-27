@@ -12,13 +12,13 @@ class AgendaFloatingHead extends StatefulWidget {
 }
 
 class _AgendaFloatingHeadState extends State<AgendaFloatingHead> {
-  late Object shark;
+  late Object dash;
 
   @override
   void initState() {
-    shark = Object(fileName: Assets.model.sharkObj);
-    shark.rotation.setValues(0, 90, 0);
-    shark.updateTransform();
+    dash = Object(fileName: Assets.model.dashObj);
+    dash.rotation.setValues(0, 90, 0);
+    dash.updateTransform();
     super.initState();
   }
 
@@ -31,8 +31,8 @@ class _AgendaFloatingHeadState extends State<AgendaFloatingHead> {
     final pitch = data.attitude.pitch * scaleFactor as double;
     final yaw = data.attitude.yaw * scaleFactor as double;
     final test = data.attitude.quaternion.z * scaleFactor as double;
-    shark.rotation.setValues(-pitch / 2 - 30, test / 2 + 160, yaw);
-    shark.updateTransform();
+    dash.rotation.setValues(-pitch / 1.5 - 30, test + 160, yaw);
+    dash.updateTransform();
   }
 
   @override
@@ -41,8 +41,8 @@ class _AgendaFloatingHeadState extends State<AgendaFloatingHead> {
 
     return Cube(
       onSceneCreated: (scene) {
-        scene.world.add(shark);
-        scene.camera.zoom = 10;
+        scene.world.add(dash);
+        scene.camera.zoom = 7;
       },
     );
   }
