@@ -9,11 +9,22 @@ import 'package:fluttercon_2023_presentation/slides/views/slide_title_and_photo_
 import 'package:fluttercon_2023_presentation/styles/fc_gradients.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class AgendaSlide extends HookConsumerWidget {
+class AgendaSlide extends StatefulHookConsumerWidget {
   const AgendaSlide({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  AgendaSlideState createState() => AgendaSlideState();
+}
+
+class AgendaSlideState extends ConsumerState<AgendaSlide> {
+  @override
+  void dispose() {
+    ref.watch(airpodsDataProvider.notifier).closeStream();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final index = ref.watch(presentationController).itemIndex;
     final motionStream = ref.watch(airpodsDataProvider).deviceMotionStream;
 

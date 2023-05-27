@@ -16,9 +16,10 @@ class AirpodsData {
 
   AirpodsData copyWith({
     io.Socket? socket,
+    StreamController<DeviceMotionData>? deviceMotionStream,
   }) {
     return AirpodsData(
-      deviceMotionStream,
+      deviceMotionStream ?? this.deviceMotionStream,
       socket ?? this.socket,
     );
   }

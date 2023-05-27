@@ -37,12 +37,21 @@ class AirpodsDataProvider extends StateNotifier<AirpodsData> {
   bool isConnected() => state.socket?.connected ?? false || false;
 
   void getAirPodsDataStream() {
-    if (isConnected() && !state.deviceMotionStream.isClosed) {
+    if (isConnected()) {
       state.socket?.on('get_events', (data) {
-        state.deviceMotionStream.sink
-            .add(DeviceMotionData.fromJson(data as Map<String, dynamic>));
+        if (!state.deviceMotionStream.isClosed) {
+          state.deviceMotionStream.sink
+              .add(DeviceMotionData.fromJson(data as Map<String, dynamic>));
+        }
       });
     }
+  }
+
+  void closeStream() {
+    state.deviceMotionStream.close();
+    state = state.copyWith(
+      deviceMotionStream: StreamController<DeviceMotionData>(),
+    );
   }
 }
 
