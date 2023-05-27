@@ -28,6 +28,9 @@ class AirpodsDataProvider extends StateNotifier<AirpodsData> {
       );
 
       state.socket?.connect();
+      state.socket?.onConnect((_) {
+        getAirPodsDataStream();
+      });
     }
   }
 

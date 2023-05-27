@@ -16,9 +16,6 @@ class AgendaSlide extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(presentationController).itemIndex;
     final motionStream = ref.watch(airpodsDataProvider).deviceMotionStream;
-    ref
-        .read<AirpodsDataProvider>(airpodsDataProvider.notifier)
-        .getAirPodsDataStream();
 
     return FadeAnimation(
       DecoratedBox(
