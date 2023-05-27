@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/key_actions.dart';
 import 'package:fluttercon_2023_presentation/presentation/model/enum/pages_of_presentation.dart';
+import 'package:fluttercon_2023_presentation/presentation/provider/airpods_data_provider.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -12,18 +13,20 @@ class PresentationSlides extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final pageController = ref.watch(presentationController).pageController;
     final focusNode = FocusNode();
     final keyPressed = useState(false);
-    final pageController = useState(PageController());
 
-    void toNextPage() {
+    void toNextItem() {
+      if (pageController.page == PagesOfPresentation.titleSlide.index) {
+        ref
+            .read<AirpodsDataProvider>(airpodsDataProvider.notifier)
+            .initializeConnection();
+      }
+
       ref
           .read<PresentationController>(presentationController.notifier)
-          .nextPage();
-      pageController.value.nextPage(
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.ease,
-      );
+          .goToNextItem();
     }
 
     KeyEventResult handleKeyEvent(RawKeyEvent event) {
@@ -32,18 +35,14 @@ class PresentationSlides extends HookConsumerWidget {
             .any((key) => key == event.physicalKey)) {
           ref
               .read<PresentationController>(presentationController.notifier)
-              .toLastPage();
-          pageController.value.previousPage(
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.ease,
-          );
+              .toLastItem();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
 
         if (KeyActions.goNextSlide.keybindings
             .any((key) => key == event.physicalKey)) {
-          toNextPage();
+          toNextItem();
           keyPressed.value = true;
           return KeyEventResult.handled;
         }
@@ -60,7 +59,7 @@ class PresentationSlides extends HookConsumerWidget {
         FocusScope.of(context).requestFocus(focusNode);
       }
 
-      toNextPage();
+      toNextItem();
     }
 
     return RawKeyboardListener(
@@ -75,7 +74,7 @@ class PresentationSlides extends HookConsumerWidget {
           backgroundColor: Colors.white,
           child: PageView.builder(
             itemCount: PagesOfPresentation.values.length,
-            controller: pageController.value,
+            controller: pageController,
             itemBuilder: (context, index) =>
                 PagesOfPresentation.values[index].slide,
           ),

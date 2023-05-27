@@ -13,6 +13,7 @@ analyzer:
     invalid_annotation_target: ignore
     public_member_api_docs: ignore
     invalid_use_of_protected_member: ignore
+    implicit_dynamic_parameter: ignore
   exclude:
     - "lib/generated/**"
 

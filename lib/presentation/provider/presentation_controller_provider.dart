@@ -4,15 +4,54 @@ import 'package:fluttercon_2023_presentation/presentation/model/presentation.dar
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PresentationController extends StateNotifier<Presentation> {
-  PresentationController() : super(const Presentation(0, Locale('en')));
+  PresentationController()
+      : super(Presentation(0, 0, const Locale('en'), PageController()));
 
-  void nextPage() => state = state.page == PagesOfPresentation.values.length - 1
-      ? state.copyWith(page: PagesOfPresentation.values.length - 1)
-      : state.copyWith(page: state.page + 1);
+  void goToNextItem() {
+    state = state.copyWith(itemIndex: state.itemIndex + 1);
 
-  void toLastPage() => state = state.page == 0
-      ? state.copyWith(page: 0)
-      : state.copyWith(page: state.page - 1);
+    if (state.itemIndex >=
+        PagesOfPresentation.values.toList()[state.page].items) {
+      nextPage();
+    }
+  }
+
+  void toLastItem() {
+    if (state.itemIndex == 0) {
+      toLastPage();
+    } else {
+      state = state.copyWith(itemIndex: state.itemIndex - 1);
+    }
+  }
+
+  void nextPage() {
+    if (state.page == PagesOfPresentation.values.length - 1) {
+      state = state.copyWith(
+        page: PagesOfPresentation.values.length - 1,
+        itemIndex: 0,
+      );
+    } else {
+      state = state.copyWith(page: state.page + 1, itemIndex: 0);
+      state.pageController.nextPage(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
+    }
+  }
+
+  void toLastPage() {
+    if (state.page == 0) {
+      state = state.copyWith(page: 0, itemIndex: 0);
+    } else {
+      final itemsOnPage =
+          PagesOfPresentation.values.toList()[state.page - 1].items;
+      state = state.copyWith(page: state.page - 1, itemIndex: itemsOnPage);
+      state.pageController.previousPage(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
+    }
+  }
 }
 
 final presentationController =

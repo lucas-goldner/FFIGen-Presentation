@@ -39,6 +39,33 @@ class $AssetsImagesGen {
       const $AssetsImagesTitleSlideGen();
 }
 
+class $AssetsModelGen {
+  const $AssetsModelGen();
+
+  /// File path: assets/model/dash.blend
+  String get dashBlend => 'assets/model/dash.blend';
+
+  /// File path: assets/model/dash.mtl
+  String get dashMtl => 'assets/model/dash.mtl';
+
+  /// File path: assets/model/dash.obj
+  String get dashObj => 'assets/model/dash.obj';
+
+  /// File path: assets/model/shark.mtl
+  String get sharkMtl => 'assets/model/shark.mtl';
+
+  /// File path: assets/model/shark.obj
+  String get sharkObj => 'assets/model/shark.obj';
+
+  /// File path: assets/model/sharkTxt.png
+  AssetGenImage get sharkTxt =>
+      const AssetGenImage('assets/model/sharkTxt.png');
+
+  /// List of all assets
+  List<dynamic> get values =>
+      [dashBlend, dashMtl, dashObj, sharkMtl, sharkObj, sharkTxt];
+}
+
 class $AssetsImagesSharedGen {
   const $AssetsImagesSharedGen();
 
@@ -101,6 +128,7 @@ class Assets {
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsModelGen model = $AssetsModelGen();
 }
 
 class AssetGenImage {
