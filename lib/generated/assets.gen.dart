@@ -39,6 +39,26 @@ class $AssetsImagesGen {
       const $AssetsImagesTitleSlideGen();
 }
 
+class $AssetsModelGen {
+  const $AssetsModelGen();
+
+  /// File path: assets/model/file.obj
+  String get file => 'assets/model/file.obj';
+
+  /// File path: assets/model/shark.mtl
+  String get sharkMtl => 'assets/model/shark.mtl';
+
+  /// File path: assets/model/shark.obj
+  String get sharkObj => 'assets/model/shark.obj';
+
+  /// File path: assets/model/sharkTxt.png
+  AssetGenImage get sharkTxt =>
+      const AssetGenImage('assets/model/sharkTxt.png');
+
+  /// List of all assets
+  List<dynamic> get values => [file, sharkMtl, sharkObj, sharkTxt];
+}
+
 class $AssetsImagesSharedGen {
   const $AssetsImagesSharedGen();
 
@@ -101,6 +121,7 @@ class Assets {
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsModelGen model = $AssetsModelGen();
 }
 
 class AssetGenImage {

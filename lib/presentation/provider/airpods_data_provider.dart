@@ -16,14 +16,8 @@ class AirpodsDataProvider extends StateNotifier<AirpodsData> {
           ),
         );
 
-  void test() {
-    print('TETSTSTSTSTTSTST');
-  }
-
   void initializeConnection() {
-    print('TEST FUCNTIOn');
     if (!isConnected()) {
-      print('HERE');
       state = state.copyWith(
         socket: io.io(
           AppConstants.websocketServerUrl,
@@ -33,20 +27,14 @@ class AirpodsDataProvider extends StateNotifier<AirpodsData> {
         ),
       );
 
-      print(state.socket);
-
       state.socket?.connect();
-
-      state.socket?.onConnect((_) {
-        print('CONNECTED TO SERVER');
-      });
     }
   }
 
   bool isConnected() => state.socket?.connected ?? false || false;
 
   void getAirPodsDataStream() {
-    if (isConnected()) {
+    if (isConnected() && !state.deviceMotionStream.isClosed) {
       state.socket?.on('get_events', (data) {
         state.deviceMotionStream.sink
             .add(DeviceMotionData.fromJson(data as Map<String, dynamic>));

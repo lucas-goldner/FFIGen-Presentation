@@ -18,7 +18,7 @@ class PresentationSlides extends HookConsumerWidget {
     final keyPressed = useState(false);
 
     void toNextItem() {
-      if (pageController.page == 0.0) {
+      if (pageController.page == PagesOfPresentation.titleSlide.index) {
         ref
             .read<AirpodsDataProvider>(airpodsDataProvider.notifier)
             .initializeConnection();

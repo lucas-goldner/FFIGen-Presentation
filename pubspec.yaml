@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   flutter_airpods: ^1.0.4
   flutter_animate: ^4.1.1+1
+  flutter_cube: ^0.1.1
   flutter_hooks: ^0.18.6
   flutter_localizations:
     sdk: flutter
@@ -37,6 +38,7 @@ flutter:
     - assets/images/title_slide/
     - assets/images/title_and_photo_slide/
     - assets/images/title_and_photo_slide_alt/
+    - assets/model/
   #   - assets/audio/
 
   fonts:
