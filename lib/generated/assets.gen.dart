@@ -59,6 +59,14 @@ class $AssetsModelGen {
 class $AssetsImagesCustomGen {
   const $AssetsImagesCustomGen();
 
+  /// File path: assets/images/custom/airpods.png
+  AssetGenImage get airpods =>
+      const AssetGenImage('assets/images/custom/airpods.png');
+
+  /// File path: assets/images/custom/cmheadphone.png
+  AssetGenImage get cmheadphone =>
+      const AssetGenImage('assets/images/custom/cmheadphone.png');
+
   /// File path: assets/images/custom/giraph.png
   AssetGenImage get giraph =>
       const AssetGenImage('assets/images/custom/giraph.png');
@@ -72,7 +80,8 @@ class $AssetsImagesCustomGen {
       const AssetGenImage('assets/images/custom/pushup.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [giraph, motionData, pushup];
+  List<AssetGenImage> get values =>
+      [airpods, cmheadphone, giraph, motionData, pushup];
 }
 
 class $AssetsImagesSharedGen {

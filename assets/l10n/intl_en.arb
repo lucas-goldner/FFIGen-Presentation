@@ -7,5 +7,12 @@
   "methodEventChannels": "Method / Eventchannels",
   "ffigenSetup": "FFIGen Setup",
   "runFfigen": "Run FFIGen",
-  "benefitsAndDownsides": "Benefits and downsides"
+  "benefitsAndDownsides": "Benefits and downsides",
+  "pushups": "Pushups: {count} / 10",
+  "@pageHomeInboxCount": {
+    "description": "Count of pushups",
+    "placeholders": {
+      "count": {}
+    }
+  }
 }

@@ -139,6 +139,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Pushups: {count} / 10`
+  String pushups(Object count) {
+    return Intl.message(
+      'Pushups: $count / 10',
+      name: 'pushups',
+      desc: '',
+      args: [count],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
