@@ -22,11 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agenda": MessageLookupByLibrary.simpleMessage("Agenda"),
+        "benefitsAndDownsides":
+            MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
+        "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
+        "methodEventChannels":
+            MessageLookupByLibrary.simpleMessage("Method / Eventchannels"),
         "presentationFooter":
             MessageLookupByLibrary.simpleMessage("Lucas Goldner, 10.05.2023"),
         "presentationSubtitle": MessageLookupByLibrary.simpleMessage(
             "Comparing ways of accessing native functions"),
         "presentationTitle":
-            MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?")
+            MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?"),
+        "prologue": MessageLookupByLibrary.simpleMessage("Prologue"),
+        "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen")
       };
 }

@@ -30,6 +30,7 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesCustomGen get custom => const $AssetsImagesCustomGen();
   $AssetsImagesSharedGen get shared => const $AssetsImagesSharedGen();
   $AssetsImagesTitleAndPhotoSlideGen get titleAndPhotoSlide =>
       const $AssetsImagesTitleAndPhotoSlideGen();
@@ -51,19 +52,27 @@ class $AssetsModelGen {
   /// File path: assets/model/dash.obj
   String get dashObj => 'assets/model/dash.obj';
 
-  /// File path: assets/model/shark.mtl
-  String get sharkMtl => 'assets/model/shark.mtl';
+  /// List of all assets
+  List<String> get values => [dashBlend, dashMtl, dashObj];
+}
 
-  /// File path: assets/model/shark.obj
-  String get sharkObj => 'assets/model/shark.obj';
+class $AssetsImagesCustomGen {
+  const $AssetsImagesCustomGen();
 
-  /// File path: assets/model/sharkTxt.png
-  AssetGenImage get sharkTxt =>
-      const AssetGenImage('assets/model/sharkTxt.png');
+  /// File path: assets/images/custom/giraph.png
+  AssetGenImage get giraph =>
+      const AssetGenImage('assets/images/custom/giraph.png');
+
+  /// File path: assets/images/custom/motion_data.png
+  AssetGenImage get motionData =>
+      const AssetGenImage('assets/images/custom/motion_data.png');
+
+  /// File path: assets/images/custom/pushup.png
+  AssetGenImage get pushup =>
+      const AssetGenImage('assets/images/custom/pushup.png');
 
   /// List of all assets
-  List<dynamic> get values =>
-      [dashBlend, dashMtl, dashObj, sharkMtl, sharkObj, sharkTxt];
+  List<AssetGenImage> get values => [giraph, motionData, pushup];
 }
 
 class $AssetsImagesSharedGen {

@@ -79,6 +79,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Agenda`
+  String get agenda {
+    return Intl.message(
+      'Agenda',
+      name: 'agenda',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prologue`
+  String get prologue {
+    return Intl.message(
+      'Prologue',
+      name: 'prologue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Method / Eventchannels`
+  String get methodEventChannels {
+    return Intl.message(
+      'Method / Eventchannels',
+      name: 'methodEventChannels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FFIGen Setup`
+  String get ffigenSetup {
+    return Intl.message(
+      'FFIGen Setup',
+      name: 'ffigenSetup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Run FFIGen`
+  String get runFfigen {
+    return Intl.message(
+      'Run FFIGen',
+      name: 'runFfigen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Benefits and downsides`
+  String get benefitsAndDownsides {
+    return Intl.message(
+      'Benefits and downsides',
+      name: 'benefitsAndDownsides',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
