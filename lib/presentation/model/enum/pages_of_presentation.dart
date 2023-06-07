@@ -11,7 +11,7 @@ enum PagesOfPresentation {
     AgendaSlide(),
     5,
   ),
-  motivation(MotivationSlide(), 3),
+  motivation(MotivationSlide(), 4),
   pushups(PushupSlide(), 1),
   solution(SolutionSlide(), 3);
 

@@ -149,6 +149,16 @@ class S {
       args: [count],
     );
   }
+
+  /// `Motivation`
+  String get motivation {
+    return Intl.message(
+      'Motivation',
+      name: 'motivation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

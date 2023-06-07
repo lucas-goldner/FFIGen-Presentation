@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
         "methodEventChannels":
             MessageLookupByLibrary.simpleMessage("Method / Eventchannels"),
+        "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
         "presentationFooter":
             MessageLookupByLibrary.simpleMessage("Lucas Goldner, 10.05.2023"),
         "presentationSubtitle": MessageLookupByLibrary.simpleMessage(

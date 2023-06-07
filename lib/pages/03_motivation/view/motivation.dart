@@ -1,7 +1,7 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:fluttercon_2023_presentation/generated/assets.gen.dart';
+import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:fluttercon_2023_presentation/presentation/widgets/directional_animation.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/components/arrow.dart';
@@ -18,6 +18,7 @@ class MotivationSlide extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(presentationController).itemIndex;
+    print(index);
 
     return DirectionalAnimation(
       DecoratedBox(
@@ -27,10 +28,10 @@ class MotivationSlide extends HookConsumerWidget {
         child: Column(
           children: [
             LayoutHeader(
-              const Column(
+              Column(
                 children: [
-                  Spacer(),
-                  TextTitle('Motivation'),
+                  const Spacer(),
+                  TextTitle(S.of(context).motivation),
                 ],
               ),
               flexUnits: 1,
@@ -40,51 +41,64 @@ class MotivationSlide extends HookConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Visibility(
-                    visible: index >= 0,
-                    child: Row(
-                      children: [
-                        Assets.images.custom.giraph.image(
-                          height: 400,
-                          fit: BoxFit.contain,
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 400),
-                          child: Arrow(400, 160),
-                        ),
-                      ],
+                    visible: index == 2,
+                    child: Assets.images.custom.motionData.image(
+                      fit: BoxFit.contain,
                     ),
                   ),
                   Visibility(
-                    visible: index >= 1,
+                    visible: index != 2,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 80),
-                          child: Assets.images.custom.motionData.image(
-                            height: 520,
-                            fit: BoxFit.contain,
+                        Visibility(
+                          visible: index >= 0,
+                          child: Row(
+                            children: [
+                              Assets.images.custom.giraph.image(
+                                height: 400,
+                                fit: BoxFit.contain,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(top: 400),
+                                child: Arrow(400, 160),
+                              ),
+                            ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 400),
-                          child: Transform.rotate(
-                            angle: -math.pi / 48.0,
-                            child: const Arrow(400, 160),
+                        Visibility(
+                          visible: index >= 1,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 80),
+                                child: Assets.images.custom.motionData.image(
+                                  height: 520,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 400),
+                                child: Transform.rotate(
+                                  angle: -math.pi / 48.0,
+                                  child: const Arrow(400, 160),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Visibility(
+                          visible: index >= 3,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(bottom: 120, right: 20),
+                            child: Assets.images.custom.pushup.image(
+                              height: 200,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                  Visibility(
-                    visible: index >= 2,
-                    child: Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 120, right: 20),
-                        child: Assets.images.custom.pushup.image(
-                          height: 200,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
                     ),
                   ),
                 ],
