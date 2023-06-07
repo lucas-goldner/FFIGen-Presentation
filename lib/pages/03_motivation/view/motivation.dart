@@ -18,7 +18,6 @@ class MotivationSlide extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(presentationController).itemIndex;
-    print(index);
 
     return DirectionalAnimation(
       DecoratedBox(
