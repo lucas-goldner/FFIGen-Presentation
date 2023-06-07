@@ -11,13 +11,11 @@ class PushupsProvider extends StateNotifier<Pushups> {
 
     if (state.inPushupMovement) {
       if (_checkForUpwardsMovement(userAccelerationY)) {
-        print('up');
         final newPushups = state.amount + 1;
         state = state.copyWith(amount: newPushups, inPushupMovement: false);
       }
     } else {
       if (_checkForDownwardsMovement(userAccelerationY)) {
-        print('down');
         state = state.copyWith(inPushupMovement: true);
       }
     }
