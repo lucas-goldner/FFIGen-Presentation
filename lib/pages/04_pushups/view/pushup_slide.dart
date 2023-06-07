@@ -1,9 +1,10 @@
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_airpods/models/device_motion_data.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:fluttercon_2023_presentation/generated/l10n.dart';
-import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
-import 'package:fluttercon_2023_presentation/slides/views/slide_title.dart';
+import 'package:fluttercon_2023_presentation/pages/04_pushups/provider/pushups_provider.dart';
+import 'package:fluttercon_2023_presentation/pages/04_pushups/widgets/pushup_counter.dart';
+import 'package:fluttercon_2023_presentation/presentation/provider/airpods_data_provider.dart';
 import 'package:fluttercon_2023_presentation/styles/fc_gradients.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -14,11 +15,9 @@ class PushupSlide extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final confettiControler =
         useState(ConfettiController(duration: const Duration(seconds: 10)));
-    final index = ref.watch(presentationController).itemIndex;
-    const pushups = 0;
-    if (pushups == 10) {
-      confettiControler.value.play();
-    }
+    final motionStream = ref.watch(airpodsDataProvider).deviceMotionStream;
+    final pushupsCalculator =
+        ref.read<PushupsProvider>(pushupProvider.notifier);
 
     return DecoratedBox(
       decoration: const BoxDecoration(
@@ -26,8 +25,20 @@ class PushupSlide extends HookConsumerWidget {
       ),
       child: Stack(
         children: [
-          SlideTitle(
-            titleText: S.of(context).pushups(pushups),
+          StreamBuilder<DeviceMotionData>(
+            stream: motionStream.stream,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                pushupsCalculator.calculatePushups(snapshot.data);
+                if (pushupsCalculator.state.amount == 10) {
+                  confettiControler.value.play();
+                }
+
+                return PushupCounter(pushupsCalculator.state.amount);
+              }
+
+              return const PushupCounter(0);
+            },
           ),
           Center(
             child: ConfettiWidget(
