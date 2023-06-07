@@ -4,6 +4,7 @@ import 'package:fluttercon_2023_presentation/pages/02_agenda/view/agenda_slide.d
 import 'package:fluttercon_2023_presentation/pages/03_motivation/view/motivation.dart';
 import 'package:fluttercon_2023_presentation/pages/04_pushups/view/pushup_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/05_solution/view/solution_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/06_method_channels/view/method_channels_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -13,7 +14,8 @@ enum PagesOfPresentation {
   ),
   motivation(MotivationSlide(), 4),
   pushups(PushupSlide(), 1),
-  solution(SolutionSlide(), 3);
+  solution(SolutionSlide(), 3),
+  methodChannels(MethodChannelsSlide(), 3);
 
   const PagesOfPresentation(this.slide, this.items);
 

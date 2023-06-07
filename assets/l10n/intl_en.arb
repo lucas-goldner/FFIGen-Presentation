@@ -15,5 +15,14 @@
       "count": {}
     }
   },
-  "motivation": "Motivation"
+  "motivation": "Motivation",
+  "methodChannel": "Method Channel",
+  "flutter": "Flutter",
+  "eventChannels": "Event Channel",
+  "invokeFunctions": "Invokes functions",
+  "receiveValue": "Receives value",
+  "startsListening": "Starts listening",
+  "implementsFlutterStreamHandler": "Implements FlutterStreamHandler interface",
+  "receivesEvents": "Receives Events from Stream",
+  "TypicalWay": "Typical way"
 }

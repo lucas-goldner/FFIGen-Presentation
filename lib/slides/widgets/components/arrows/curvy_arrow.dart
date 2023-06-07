@@ -1,16 +1,16 @@
 import 'package:arrow_path/arrow_path.dart';
 import 'package:flutter/material.dart';
 
-class Arrow extends StatefulWidget {
-  const Arrow(this.height, this.width, {super.key});
+class CurvyArrow extends StatefulWidget {
+  const CurvyArrow(this.height, this.width, {super.key});
   final double width;
   final double height;
 
   @override
-  State<Arrow> createState() => _ArrowState();
+  State<CurvyArrow> createState() => _CurvyArrowState();
 }
 
-class _ArrowState extends State<Arrow> {
+class _CurvyArrowState extends State<CurvyArrow> {
   @override
   Widget build(BuildContext context) => ClipRect(
         child: CustomPaint(

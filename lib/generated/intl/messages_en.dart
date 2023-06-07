@@ -24,10 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "TypicalWay": MessageLookupByLibrary.simpleMessage("Typical way"),
         "agenda": MessageLookupByLibrary.simpleMessage("Agenda"),
         "benefitsAndDownsides":
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
+        "eventChannels": MessageLookupByLibrary.simpleMessage("Event Channel"),
         "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
+        "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
+        "implementsFlutterStreamHandler": MessageLookupByLibrary.simpleMessage(
+            "Implements FlutterStreamHandler interface"),
+        "invokeFunctions":
+            MessageLookupByLibrary.simpleMessage("Invokes functions"),
+        "methodChannel": MessageLookupByLibrary.simpleMessage("Method Channel"),
         "methodEventChannels":
             MessageLookupByLibrary.simpleMessage("Method / Eventchannels"),
         "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
@@ -39,6 +47,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?"),
         "prologue": MessageLookupByLibrary.simpleMessage("Prologue"),
         "pushups": m0,
-        "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen")
+        "receiveValue": MessageLookupByLibrary.simpleMessage("Receives value"),
+        "receivesEvents":
+            MessageLookupByLibrary.simpleMessage("Receives Events from Stream"),
+        "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
+        "startsListening":
+            MessageLookupByLibrary.simpleMessage("Starts listening")
       };
 }
