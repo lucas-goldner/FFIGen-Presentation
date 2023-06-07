@@ -6,6 +6,7 @@ import 'package:fluttercon_2023_presentation/pages/04_pushups/view/pushup_slide.
 import 'package:fluttercon_2023_presentation/pages/05_solution/view/solution_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/06_method_channels/view/method_channels_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/07_event_channel_flutter_setup/view/event_channel_flutter_setup_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/08_event_channel_flutter_setup/view/event_channel_ios_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -17,7 +18,11 @@ enum PagesOfPresentation {
   pushups(PushupSlide(), 1),
   solution(SolutionSlide(), 3),
   methodChannels(MethodChannelsSlide(), 3),
-  eventChannelFlutterSetup(EventChannelFlutterSetupSlide(), 1);
+  eventChannelFlutterSetup(EventChannelFlutterSetupSlide(), 1),
+  eventChanneliOSSetup(
+    EventChanneliOSSlide(),
+    1,
+  );
 
   const PagesOfPresentation(this.slide, this.items);
 
