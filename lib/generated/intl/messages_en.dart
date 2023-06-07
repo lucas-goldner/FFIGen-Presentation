@@ -29,6 +29,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "benefitsAndDownsides":
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
         "eventChannels": MessageLookupByLibrary.simpleMessage("Event Channel"),
+        "eventChannelsFlutter": MessageLookupByLibrary.simpleMessage(
+            "Eventchannel - Flutter setup"),
+        "eventChannelsiOS":
+            MessageLookupByLibrary.simpleMessage("Eventchannel - iOS setup"),
         "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
         "implementsFlutterStreamHandler": MessageLookupByLibrary.simpleMessage(

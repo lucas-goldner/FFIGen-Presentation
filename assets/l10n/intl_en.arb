@@ -24,5 +24,7 @@
   "startsListening": "Starts listening",
   "implementsFlutterStreamHandler": "Implements FlutterStreamHandler interface",
   "receivesEvents": "Receives Events from Stream",
-  "TypicalWay": "Typical way"
+  "TypicalWay": "Typical way",
+  "eventChannelsFlutter": "Eventchannel - Flutter setup",
+  "eventChannelsiOS": "Eventchannel - iOS setup"
 }

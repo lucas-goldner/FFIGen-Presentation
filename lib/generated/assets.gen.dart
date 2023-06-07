@@ -67,6 +67,10 @@ class $AssetsImagesCustomGen {
   AssetGenImage get cmheadphone =>
       const AssetGenImage('assets/images/custom/cmheadphone.png');
 
+  /// File path: assets/images/custom/flutter_airpod_init.png
+  AssetGenImage get flutterAirpodInit =>
+      const AssetGenImage('assets/images/custom/flutter_airpod_init.png');
+
   /// File path: assets/images/custom/giraph.png
   AssetGenImage get giraph =>
       const AssetGenImage('assets/images/custom/giraph.png');
@@ -81,7 +85,7 @@ class $AssetsImagesCustomGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [airpods, cmheadphone, giraph, motionData, pushup];
+      [airpods, cmheadphone, flutterAirpodInit, giraph, motionData, pushup];
 }
 
 class $AssetsImagesSharedGen {

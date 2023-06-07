@@ -249,6 +249,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Eventchannel - Flutter setup`
+  String get eventChannelsFlutter {
+    return Intl.message(
+      'Eventchannel - Flutter setup',
+      name: 'eventChannelsFlutter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eventchannel - iOS setup`
+  String get eventChannelsiOS {
+    return Intl.message(
+      'Eventchannel - iOS setup',
+      name: 'eventChannelsiOS',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
