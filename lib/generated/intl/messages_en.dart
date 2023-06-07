@@ -20,13 +20,25 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(count) => "Pushups: ${count} / 10";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agenda": MessageLookupByLibrary.simpleMessage("Agenda"),
+        "benefitsAndDownsides":
+            MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
+        "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
+        "methodEventChannels":
+            MessageLookupByLibrary.simpleMessage("Method / Eventchannels"),
+        "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
         "presentationFooter":
             MessageLookupByLibrary.simpleMessage("Lucas Goldner, 10.05.2023"),
         "presentationSubtitle": MessageLookupByLibrary.simpleMessage(
             "Comparing ways of accessing native functions"),
         "presentationTitle":
-            MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?")
+            MessageLookupByLibrary.simpleMessage("FFIGen - The solution ?"),
+        "prologue": MessageLookupByLibrary.simpleMessage("Prologue"),
+        "pushups": m0,
+        "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen")
       };
 }

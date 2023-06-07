@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_airpods/models/device_motion_data.dart';
 import 'package:fluttercon_2023_presentation/generated/assets.gen.dart';
+import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/pages/02_agenda/widgets/agenda_floating_head.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/airpods_data_provider.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
@@ -57,13 +58,13 @@ class AgendaSlideState extends ConsumerState<AgendaSlide> {
               );
             },
           ),
-          'Agenda',
-          const [
-            'Prologue',
-            'Method / Eventchannels',
-            'FFIGen Setup',
-            'Run FFIGen',
-            'Benefits and downsides'
+          S.of(context).agenda,
+          [
+            S.of(context).prologue,
+            S.of(context).methodEventChannels,
+            S.of(context).ffigenSetup,
+            S.of(context).runFfigen,
+            S.of(context).benefitsAndDownsides
           ],
           itemListdotted: true,
           itemListtextAlign: TextAlign.start,
