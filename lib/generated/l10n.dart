@@ -159,6 +159,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Method Channel`
+  String get methodChannel {
+    return Intl.message(
+      'Method Channel',
+      name: 'methodChannel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flutter`
+  String get flutter {
+    return Intl.message(
+      'Flutter',
+      name: 'flutter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event Channel`
+  String get eventChannels {
+    return Intl.message(
+      'Event Channel',
+      name: 'eventChannels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invokes functions`
+  String get invokeFunctions {
+    return Intl.message(
+      'Invokes functions',
+      name: 'invokeFunctions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receives value`
+  String get receiveValue {
+    return Intl.message(
+      'Receives value',
+      name: 'receiveValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Starts listening`
+  String get startsListening {
+    return Intl.message(
+      'Starts listening',
+      name: 'startsListening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Implements FlutterStreamHandler interface`
+  String get implementsFlutterStreamHandler {
+    return Intl.message(
+      'Implements FlutterStreamHandler interface',
+      name: 'implementsFlutterStreamHandler',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receives Events from Stream`
+  String get receivesEvents {
+    return Intl.message(
+      'Receives Events from Stream',
+      name: 'receivesEvents',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Typical way`
+  String get TypicalWay {
+    return Intl.message(
+      'Typical way',
+      name: 'TypicalWay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eventchannel - Flutter setup`
+  String get eventChannelsFlutter {
+    return Intl.message(
+      'Eventchannel - Flutter setup',
+      name: 'eventChannelsFlutter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eventchannel - iOS setup`
+  String get eventChannelsiOS {
+    return Intl.message(
+      'Eventchannel - iOS setup',
+      name: 'eventChannelsiOS',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

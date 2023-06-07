@@ -4,7 +4,7 @@ import 'package:fluttercon_2023_presentation/generated/assets.gen.dart';
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
 import 'package:fluttercon_2023_presentation/presentation/widgets/directional_animation.dart';
-import 'package:fluttercon_2023_presentation/slides/widgets/components/arrow.dart';
+import 'package:fluttercon_2023_presentation/slides/widgets/components/arrows/curvy_arrow.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_body.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/layout/layout_header.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/title.dart';
@@ -60,7 +60,7 @@ class MotivationSlide extends HookConsumerWidget {
                               ),
                               const Padding(
                                 padding: EdgeInsets.only(top: 400),
-                                child: Arrow(400, 160),
+                                child: CurvyArrow(400, 160),
                               ),
                             ],
                           ),
@@ -80,7 +80,7 @@ class MotivationSlide extends HookConsumerWidget {
                                 padding: const EdgeInsets.only(top: 400),
                                 child: Transform.rotate(
                                   angle: -math.pi / 48.0,
-                                  child: const Arrow(400, 160),
+                                  child: const CurvyArrow(400, 160),
                                 ),
                               ),
                             ],
@@ -88,13 +88,9 @@ class MotivationSlide extends HookConsumerWidget {
                         ),
                         Visibility(
                           visible: index >= 3,
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(bottom: 120, right: 20),
-                            child: Assets.images.custom.pushup.image(
-                              height: 200,
-                              fit: BoxFit.contain,
-                            ),
+                          child: Assets.images.custom.pushup.image(
+                            height: 60,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ],
