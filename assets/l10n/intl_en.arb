@@ -32,5 +32,6 @@
   "ffigenexplain": "Bindings generator for FFI bindings",
   "requiresConfig": "Generation requires config",
   "compatibleLanguages": "Compatible with various languages",
-  "theMasterFile": "The master file"
+  "theMasterFile": "The master file",
+  "includeFramework": "Include framework"
 }

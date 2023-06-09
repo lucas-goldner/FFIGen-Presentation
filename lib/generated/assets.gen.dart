@@ -91,6 +91,18 @@ class $AssetsImagesCustomGen {
   AssetGenImage get pushup =>
       const AssetGenImage('assets/images/custom/pushup.png');
 
+  /// File path: assets/images/custom/xcode_linking_0.png
+  AssetGenImage get xcodeLinking0 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_0.png');
+
+  /// File path: assets/images/custom/xcode_linking_1.png
+  AssetGenImage get xcodeLinking1 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_1.png');
+
+  /// File path: assets/images/custom/xcode_linking_2.png
+  AssetGenImage get xcodeLinking2 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_2.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         airpods,
@@ -100,7 +112,10 @@ class $AssetsImagesCustomGen {
         flutterAirpodIos,
         giraph,
         motionData,
-        pushup
+        pushup,
+        xcodeLinking0,
+        xcodeLinking1,
+        xcodeLinking2
       ];
 }
 

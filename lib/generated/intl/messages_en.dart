@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
         "implementsFlutterStreamHandler": MessageLookupByLibrary.simpleMessage(
             "Implements FlutterStreamHandler interface"),
+        "includeFramework":
+            MessageLookupByLibrary.simpleMessage("Include framework"),
         "invokeFunctions":
             MessageLookupByLibrary.simpleMessage("Invokes functions"),
         "methodChannel": MessageLookupByLibrary.simpleMessage("Method Channel"),

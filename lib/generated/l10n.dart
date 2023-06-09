@@ -329,6 +329,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Include framework`
+  String get includeFramework {
+    return Intl.message(
+      'Include framework',
+      name: 'includeFramework',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
