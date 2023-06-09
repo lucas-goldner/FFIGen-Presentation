@@ -269,6 +269,56 @@ class S {
       args: [],
     );
   }
+
+  /// `FFIGen`
+  String get ffigen {
+    return Intl.message(
+      'FFIGen',
+      name: 'ffigen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FFI -> Foreign function interface`
+  String get ffiExplain {
+    return Intl.message(
+      'FFI -> Foreign function interface',
+      name: 'ffiExplain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bindings generator for FFI bindings`
+  String get ffigenexplain {
+    return Intl.message(
+      'Bindings generator for FFI bindings',
+      name: 'ffigenexplain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generation requires config`
+  String get requiresConfig {
+    return Intl.message(
+      'Generation requires config',
+      name: 'requiresConfig',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Compatible with various languages`
+  String get compatibleLanguages {
+    return Intl.message(
+      'Compatible with various languages',
+      name: 'compatibleLanguages',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
