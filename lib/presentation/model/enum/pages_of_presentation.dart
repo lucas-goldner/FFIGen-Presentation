@@ -8,6 +8,7 @@ import 'package:fluttercon_2023_presentation/pages/06_method_channels/view/metho
 import 'package:fluttercon_2023_presentation/pages/07_event_channel_flutter_setup/view/event_channel_flutter_setup_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/08_event_channel_flutter_setup/view/event_channel_ios_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/09_ffigen_explanation/view/ffigen_explanation_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/10_config_file/view/config_file_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -26,6 +27,10 @@ enum PagesOfPresentation {
   ),
   ffigenExplanation(
     FFIGenExplanationSlide(),
+    5,
+  ),
+  configFile(
+    ConfigFileSlide(),
     5,
   );
 

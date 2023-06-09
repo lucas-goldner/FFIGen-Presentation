@@ -31,5 +31,6 @@
   "ffiExplain": "FFI -> Foreign function interface",
   "ffigenexplain": "Bindings generator for FFI bindings",
   "requiresConfig": "Generation requires config",
-  "compatibleLanguages": "Compatible with various languages"
+  "compatibleLanguages": "Compatible with various languages",
+  "theMasterFile": "The master file"
 }

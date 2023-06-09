@@ -65,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Generation requires config"),
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
-            MessageLookupByLibrary.simpleMessage("Starts listening")
+            MessageLookupByLibrary.simpleMessage("Starts listening"),
+        "theMasterFile": MessageLookupByLibrary.simpleMessage("The master file")
       };
 }

@@ -319,6 +319,16 @@ class S {
       args: [],
     );
   }
+
+  /// `The master file`
+  String get theMasterFile {
+    return Intl.message(
+      'The master file',
+      name: 'theMasterFile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
