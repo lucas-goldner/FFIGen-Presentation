@@ -67,6 +67,10 @@ class $AssetsImagesCustomGen {
   AssetGenImage get cmheadphone =>
       const AssetGenImage('assets/images/custom/cmheadphone.png');
 
+  /// File path: assets/images/custom/cmheadphone_provider.png
+  AssetGenImage get cmheadphoneProvider =>
+      const AssetGenImage('assets/images/custom/cmheadphone_provider.png');
+
   /// File path: assets/images/custom/ffigen_config.png
   AssetGenImage get ffigenConfig =>
       const AssetGenImage('assets/images/custom/ffigen_config.png');
@@ -107,6 +111,7 @@ class $AssetsImagesCustomGen {
   List<AssetGenImage> get values => [
         airpods,
         cmheadphone,
+        cmheadphoneProvider,
         ffigenConfig,
         flutterAirpodInit,
         flutterAirpodIos,

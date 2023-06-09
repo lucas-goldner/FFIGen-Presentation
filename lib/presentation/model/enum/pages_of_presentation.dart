@@ -6,10 +6,11 @@ import 'package:fluttercon_2023_presentation/pages/04_pushups/view/pushup_slide.
 import 'package:fluttercon_2023_presentation/pages/05_solution/view/solution_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/06_method_channels/view/method_channels_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/07_event_channel_flutter_setup/view/event_channel_flutter_setup_slide.dart';
-import 'package:fluttercon_2023_presentation/pages/08_event_channel_flutter_setup/view/event_channel_ios_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/08_event_channel_ios_setup/view/event_channel_ios_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/09_ffigen_explanation/view/ffigen_explanation_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/10_config_file/view/config_file_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/11_xcode_linking/view/xcode_linking_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/12_cmheadphone_provider/view/cmheadphone_provider_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -34,7 +35,8 @@ enum PagesOfPresentation {
     ConfigFileSlide(),
     5,
   ),
-  xcodeLinkingSlide(XcodeLinkingSlide(), 3);
+  xcodeLinking(XcodeLinkingSlide(), 3),
+  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2);
 
   const PagesOfPresentation(this.slide, this.items);
 

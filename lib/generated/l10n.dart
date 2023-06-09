@@ -339,6 +339,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Using the bindings`
+  String get usingTheBindings {
+    return Intl.message(
+      'Using the bindings',
+      name: 'usingTheBindings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

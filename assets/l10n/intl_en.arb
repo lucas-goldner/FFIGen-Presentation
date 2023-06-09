@@ -33,5 +33,6 @@
   "requiresConfig": "Generation requires config",
   "compatibleLanguages": "Compatible with various languages",
   "theMasterFile": "The master file",
-  "includeFramework": "Include framework"
+  "includeFramework": "Include framework",
+  "usingTheBindings": "Using the bindings"
 }

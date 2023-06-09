@@ -68,6 +68,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
             MessageLookupByLibrary.simpleMessage("Starts listening"),
-        "theMasterFile": MessageLookupByLibrary.simpleMessage("The master file")
+        "theMasterFile":
+            MessageLookupByLibrary.simpleMessage("The master file"),
+        "usingTheBindings":
+            MessageLookupByLibrary.simpleMessage("Using the bindings")
       };
 }
