@@ -67,6 +67,14 @@ class $AssetsImagesCustomGen {
   AssetGenImage get cmheadphone =>
       const AssetGenImage('assets/images/custom/cmheadphone.png');
 
+  /// File path: assets/images/custom/cmheadphone_provider.png
+  AssetGenImage get cmheadphoneProvider =>
+      const AssetGenImage('assets/images/custom/cmheadphone_provider.png');
+
+  /// File path: assets/images/custom/ffigen_config.png
+  AssetGenImage get ffigenConfig =>
+      const AssetGenImage('assets/images/custom/ffigen_config.png');
+
   /// File path: assets/images/custom/flutter_airpod_init.png
   AssetGenImage get flutterAirpodInit =>
       const AssetGenImage('assets/images/custom/flutter_airpod_init.png');
@@ -87,15 +95,32 @@ class $AssetsImagesCustomGen {
   AssetGenImage get pushup =>
       const AssetGenImage('assets/images/custom/pushup.png');
 
+  /// File path: assets/images/custom/xcode_linking_0.png
+  AssetGenImage get xcodeLinking0 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_0.png');
+
+  /// File path: assets/images/custom/xcode_linking_1.png
+  AssetGenImage get xcodeLinking1 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_1.png');
+
+  /// File path: assets/images/custom/xcode_linking_2.png
+  AssetGenImage get xcodeLinking2 =>
+      const AssetGenImage('assets/images/custom/xcode_linking_2.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         airpods,
         cmheadphone,
+        cmheadphoneProvider,
+        ffigenConfig,
         flutterAirpodInit,
         flutterAirpodIos,
         giraph,
         motionData,
-        pushup
+        pushup,
+        xcodeLinking0,
+        xcodeLinking1,
+        xcodeLinking2
       ];
 }
 

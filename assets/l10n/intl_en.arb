@@ -26,5 +26,13 @@
   "receivesEvents": "Receives Events from Stream",
   "TypicalWay": "Typical way",
   "eventChannelsFlutter": "Eventchannel - Flutter setup",
-  "eventChannelsiOS": "Eventchannel - iOS setup"
+  "eventChannelsiOS": "Eventchannel - iOS setup",
+  "ffigen": "FFIGen",
+  "ffiExplain": "FFI -> Foreign function interface",
+  "ffigenexplain": "Bindings generator for FFI bindings",
+  "requiresConfig": "Generation requires config",
+  "compatibleLanguages": "Compatible with various languages",
+  "theMasterFile": "The master file",
+  "includeFramework": "Include framework",
+  "usingTheBindings": "Using the bindings"
 }

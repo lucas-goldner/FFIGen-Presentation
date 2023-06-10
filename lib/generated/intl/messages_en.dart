@@ -28,15 +28,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "agenda": MessageLookupByLibrary.simpleMessage("Agenda"),
         "benefitsAndDownsides":
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
+        "compatibleLanguages": MessageLookupByLibrary.simpleMessage(
+            "Compatible with various languages"),
         "eventChannels": MessageLookupByLibrary.simpleMessage("Event Channel"),
         "eventChannelsFlutter": MessageLookupByLibrary.simpleMessage(
             "Eventchannel - Flutter setup"),
         "eventChannelsiOS":
             MessageLookupByLibrary.simpleMessage("Eventchannel - iOS setup"),
+        "ffiExplain": MessageLookupByLibrary.simpleMessage(
+            "FFI -> Foreign function interface"),
+        "ffigen": MessageLookupByLibrary.simpleMessage("FFIGen"),
         "ffigenSetup": MessageLookupByLibrary.simpleMessage("FFIGen Setup"),
+        "ffigenexplain": MessageLookupByLibrary.simpleMessage(
+            "Bindings generator for FFI bindings"),
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
         "implementsFlutterStreamHandler": MessageLookupByLibrary.simpleMessage(
             "Implements FlutterStreamHandler interface"),
+        "includeFramework":
+            MessageLookupByLibrary.simpleMessage("Include framework"),
         "invokeFunctions":
             MessageLookupByLibrary.simpleMessage("Invokes functions"),
         "methodChannel": MessageLookupByLibrary.simpleMessage("Method Channel"),
@@ -54,8 +63,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "receiveValue": MessageLookupByLibrary.simpleMessage("Receives value"),
         "receivesEvents":
             MessageLookupByLibrary.simpleMessage("Receives Events from Stream"),
+        "requiresConfig":
+            MessageLookupByLibrary.simpleMessage("Generation requires config"),
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
-            MessageLookupByLibrary.simpleMessage("Starts listening")
+            MessageLookupByLibrary.simpleMessage("Starts listening"),
+        "theMasterFile":
+            MessageLookupByLibrary.simpleMessage("The master file"),
+        "usingTheBindings":
+            MessageLookupByLibrary.simpleMessage("Using the bindings")
       };
 }

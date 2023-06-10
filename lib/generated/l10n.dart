@@ -269,6 +269,86 @@ class S {
       args: [],
     );
   }
+
+  /// `FFIGen`
+  String get ffigen {
+    return Intl.message(
+      'FFIGen',
+      name: 'ffigen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FFI -> Foreign function interface`
+  String get ffiExplain {
+    return Intl.message(
+      'FFI -> Foreign function interface',
+      name: 'ffiExplain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bindings generator for FFI bindings`
+  String get ffigenexplain {
+    return Intl.message(
+      'Bindings generator for FFI bindings',
+      name: 'ffigenexplain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generation requires config`
+  String get requiresConfig {
+    return Intl.message(
+      'Generation requires config',
+      name: 'requiresConfig',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Compatible with various languages`
+  String get compatibleLanguages {
+    return Intl.message(
+      'Compatible with various languages',
+      name: 'compatibleLanguages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The master file`
+  String get theMasterFile {
+    return Intl.message(
+      'The master file',
+      name: 'theMasterFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Include framework`
+  String get includeFramework {
+    return Intl.message(
+      'Include framework',
+      name: 'includeFramework',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using the bindings`
+  String get usingTheBindings {
+    return Intl.message(
+      'Using the bindings',
+      name: 'usingTheBindings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
