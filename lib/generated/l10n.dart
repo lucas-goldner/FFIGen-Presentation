@@ -349,6 +349,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Downsides`
+  String get downsides {
+    return Intl.message(
+      'Downsides',
+      name: 'downsides',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Benefits`
+  String get benefits {
+    return Intl.message(
+      'Benefits',
+      name: 'benefits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Initial setup can take time`
+  String get downsideSetup {
+    return Intl.message(
+      'Initial setup can take time',
+      name: 'downsideSetup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Output can difficult`
+  String get downsideOutput {
+    return Intl.message(
+      'Output can difficult',
+      name: 'downsideOutput',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Less 'control' than using methodchannels`
+  String get downsideControl {
+    return Intl.message(
+      'Less \'control\' than using methodchannels',
+      name: 'downsideControl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Possible to will not work (ObjC and Swift)`
+  String get downsideWontwork {
+    return Intl.message(
+      'Possible to will not work (ObjC and Swift)',
+      name: 'downsideWontwork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fast development`
+  String get benefitFast {
+    return Intl.message(
+      'Fast development',
+      name: 'benefitFast',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Only one config file`
+  String get benefitConfig {
+    return Intl.message(
+      'Only one config file',
+      name: 'benefitConfig',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Highly customizable`
+  String get benefitCustomizable {
+    return Intl.message(
+      'Highly customizable',
+      name: 'benefitCustomizable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Testable`
+  String get benefitTestable {
+    return Intl.message(
+      'Testable',
+      name: 'benefitTestable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Supports various languages`
+  String get benefitManyLanguages {
+    return Intl.message(
+      'Supports various languages',
+      name: 'benefitManyLanguages',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

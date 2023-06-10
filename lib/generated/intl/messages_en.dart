@@ -26,10 +26,28 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "TypicalWay": MessageLookupByLibrary.simpleMessage("Typical way"),
         "agenda": MessageLookupByLibrary.simpleMessage("Agenda"),
+        "benefitConfig":
+            MessageLookupByLibrary.simpleMessage("Only one config file"),
+        "benefitCustomizable":
+            MessageLookupByLibrary.simpleMessage("Highly customizable"),
+        "benefitFast": MessageLookupByLibrary.simpleMessage("Fast development"),
+        "benefitManyLanguages":
+            MessageLookupByLibrary.simpleMessage("Supports various languages"),
+        "benefitTestable": MessageLookupByLibrary.simpleMessage("Testable"),
+        "benefits": MessageLookupByLibrary.simpleMessage("Benefits"),
         "benefitsAndDownsides":
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
         "compatibleLanguages": MessageLookupByLibrary.simpleMessage(
             "Compatible with various languages"),
+        "downsideControl": MessageLookupByLibrary.simpleMessage(
+            "Less \'control\' than using methodchannels"),
+        "downsideOutput":
+            MessageLookupByLibrary.simpleMessage("Output can difficult"),
+        "downsideSetup":
+            MessageLookupByLibrary.simpleMessage("Initial setup can take time"),
+        "downsideWontwork": MessageLookupByLibrary.simpleMessage(
+            "Possible to will not work (ObjC and Swift)"),
+        "downsides": MessageLookupByLibrary.simpleMessage("Downsides"),
         "eventChannels": MessageLookupByLibrary.simpleMessage("Event Channel"),
         "eventChannelsFlutter": MessageLookupByLibrary.simpleMessage(
             "Eventchannel - Flutter setup"),

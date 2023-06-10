@@ -11,6 +11,8 @@ import 'package:fluttercon_2023_presentation/pages/09_ffigen_explanation/view/ff
 import 'package:fluttercon_2023_presentation/pages/10_config_file/view/config_file_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/11_xcode_linking/view/xcode_linking_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/12_cmheadphone_provider/view/cmheadphone_provider_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/13_downsides/view/downsides_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/14_benefits/view/benefits_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -33,10 +35,12 @@ enum PagesOfPresentation {
   ),
   configFile(
     ConfigFileSlide(),
-    5,
+    2,
   ),
   xcodeLinking(XcodeLinkingSlide(), 3),
-  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2);
+  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2),
+  downsides(DownsidesSlide(), 4),
+  benefits(BenefitsSlide(), 5);
 
   const PagesOfPresentation(this.slide, this.items);
 

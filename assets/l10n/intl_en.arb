@@ -34,5 +34,16 @@
   "compatibleLanguages": "Compatible with various languages",
   "theMasterFile": "The master file",
   "includeFramework": "Include framework",
-  "usingTheBindings": "Using the bindings"
+  "usingTheBindings": "Using the bindings",
+  "downsides": "Downsides",
+  "benefits": "Benefits",
+  "downsideSetup": "Initial setup can take time",
+  "downsideOutput": "Output can difficult",
+  "downsideControl": "Less 'control' than using methodchannels",
+  "downsideWontwork": "Possible to will not work (ObjC and Swift)",
+  "benefitFast": "Fast development",
+  "benefitConfig": "Only one config file",
+  "benefitCustomizable": "Highly customizable",
+  "benefitTestable": "Testable",
+  "benefitManyLanguages": "Supports various languages"
 }
