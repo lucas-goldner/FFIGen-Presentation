@@ -63,6 +63,14 @@ class $AssetsImagesCustomGen {
   AssetGenImage get airpods =>
       const AssetGenImage('assets/images/custom/airpods.png');
 
+  /// File path: assets/images/custom/bitfactory_logo_long.png
+  AssetGenImage get bitfactoryLogoLong =>
+      const AssetGenImage('assets/images/custom/bitfactory_logo_long.png');
+
+  /// File path: assets/images/custom/bitfactory_logo_small.png
+  AssetGenImage get bitfactoryLogoSmall =>
+      const AssetGenImage('assets/images/custom/bitfactory_logo_small.png');
+
   /// File path: assets/images/custom/cmheadphone.png
   AssetGenImage get cmheadphone =>
       const AssetGenImage('assets/images/custom/cmheadphone.png');
@@ -95,6 +103,9 @@ class $AssetsImagesCustomGen {
   AssetGenImage get pushup =>
       const AssetGenImage('assets/images/custom/pushup.png');
 
+  /// File path: assets/images/custom/qr.png
+  AssetGenImage get qr => const AssetGenImage('assets/images/custom/qr.png');
+
   /// File path: assets/images/custom/xcode_linking_0.png
   AssetGenImage get xcodeLinking0 =>
       const AssetGenImage('assets/images/custom/xcode_linking_0.png');
@@ -110,6 +121,8 @@ class $AssetsImagesCustomGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         airpods,
+        bitfactoryLogoLong,
+        bitfactoryLogoSmall,
         cmheadphone,
         cmheadphoneProvider,
         ffigenConfig,
@@ -118,6 +131,7 @@ class $AssetsImagesCustomGen {
         giraph,
         motionData,
         pushup,
+        qr,
         xcodeLinking0,
         xcodeLinking1,
         xcodeLinking2

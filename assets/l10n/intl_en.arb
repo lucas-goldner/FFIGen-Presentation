@@ -45,5 +45,7 @@
   "benefitConfig": "Only one config file",
   "benefitCustomizable": "Highly customizable",
   "benefitTestable": "Testable",
-  "benefitManyLanguages": "Supports various languages"
+  "benefitManyLanguages": "Supports various languages",
+  "thanks": "Thanks",
+  "repoLink": "https://github.com/lucas-goldner/fluttercon_2023_presentation"
 }

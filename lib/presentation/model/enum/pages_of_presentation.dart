@@ -13,6 +13,7 @@ import 'package:fluttercon_2023_presentation/pages/11_xcode_linking/view/xcode_l
 import 'package:fluttercon_2023_presentation/pages/12_cmheadphone_provider/view/cmheadphone_provider_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/13_downsides/view/downsides_slide.dart';
 import 'package:fluttercon_2023_presentation/pages/14_benefits/view/benefits_slide.dart';
+import 'package:fluttercon_2023_presentation/pages/15_outro/view/outo_slide.dart';
 
 enum PagesOfPresentation {
   titleSlide(TitleSlide(), 1),
@@ -38,9 +39,10 @@ enum PagesOfPresentation {
     2,
   ),
   xcodeLinking(XcodeLinkingSlide(), 3),
-  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2),
+  cmheadphoneProvider(CMHeadphoneProviderSlide(), 1),
   downsides(DownsidesSlide(), 4),
-  benefits(BenefitsSlide(), 5);
+  benefits(BenefitsSlide(), 5),
+  outro(OutroSlide(), 1);
 
   const PagesOfPresentation(this.slide, this.items);
 
