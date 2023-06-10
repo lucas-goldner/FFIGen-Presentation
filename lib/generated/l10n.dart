@@ -459,6 +459,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Thanks`
+  String get thanks {
+    return Intl.message(
+      'Thanks',
+      name: 'thanks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://github.com/lucas-goldner/fluttercon_2023_presentation`
+  String get repoLink {
+    return Intl.message(
+      'https://github.com/lucas-goldner/fluttercon_2023_presentation',
+      name: 'repoLink',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -15,8 +15,9 @@ class TitleSlideOverlay extends StatelessWidget {
         LayoutHeader(
           Row(
             children: [
+              Assets.images.custom.bitfactoryLogoSmall.image(),
               Padding(
-                padding: const EdgeInsets.only(left: 32),
+                padding: const EdgeInsets.only(left: 12),
                 child:
                     Assets.images.shared.flutterIcon.svg(width: 80, height: 80),
               ),

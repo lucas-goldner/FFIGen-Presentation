@@ -81,11 +81,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "receiveValue": MessageLookupByLibrary.simpleMessage("Receives value"),
         "receivesEvents":
             MessageLookupByLibrary.simpleMessage("Receives Events from Stream"),
+        "repoLink": MessageLookupByLibrary.simpleMessage(
+            "https://github.com/lucas-goldner/fluttercon_2023_presentation"),
         "requiresConfig":
             MessageLookupByLibrary.simpleMessage("Generation requires config"),
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
             MessageLookupByLibrary.simpleMessage("Starts listening"),
+        "thanks": MessageLookupByLibrary.simpleMessage("Thanks"),
         "theMasterFile":
             MessageLookupByLibrary.simpleMessage("The master file"),
         "usingTheBindings":
