@@ -28,7 +28,10 @@ class BenefitsSlide extends HookConsumerWidget {
                 const SizedBox(
                   width: 80,
                 ),
-                TextTitle(S.of(context).benefits),
+                TextTitle(
+                  S.of(context).benefits,
+                  gradient: FCGradients.benefitsGradient,
+                ),
               ],
             ),
           ),

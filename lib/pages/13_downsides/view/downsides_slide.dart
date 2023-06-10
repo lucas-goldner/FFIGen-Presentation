@@ -28,7 +28,10 @@ class DownsidesSlide extends HookConsumerWidget {
                 const SizedBox(
                   width: 80,
                 ),
-                TextTitle(S.of(context).downsides),
+                TextTitle(
+                  S.of(context).downsides,
+                  gradient: FCGradients.downsidesGradient,
+                ),
               ],
             ),
           ),

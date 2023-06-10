@@ -31,4 +31,24 @@ class FCGradients {
     ],
     stops: [0.5, 1.0],
   );
+
+  static const LinearGradient downsidesGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color.fromARGB(255, 75, 41, 41),
+      Color.fromARGB(255, 180, 37, 37),
+    ],
+    stops: [0.05, 0.3],
+  );
+
+  static const LinearGradient benefitsGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color.fromARGB(255, 6, 100, 40),
+      Color.fromARGB(255, 18, 196, 83),
+    ],
+    stops: [0.05, 0.3],
+  );
 }
