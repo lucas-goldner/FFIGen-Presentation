@@ -39,7 +39,7 @@ enum PagesOfPresentation {
     2,
   ),
   xcodeLinking(XcodeLinkingSlide(), 3),
-  cmheadphoneProvider(CMHeadphoneProviderSlide(), 1),
+  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2),
   downsides(DownsidesSlide(), 4),
   benefits(BenefitsSlide(), 5),
   outro(OutroSlide(), 1);

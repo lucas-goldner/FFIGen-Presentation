@@ -71,6 +71,10 @@ class $AssetsImagesCustomGen {
   AssetGenImage get bitfactoryLogoSmall =>
       const AssetGenImage('assets/images/custom/bitfactory_logo_small.png');
 
+  /// File path: assets/images/custom/cm_headphone_provider_ios.png
+  AssetGenImage get cmHeadphoneProviderIos =>
+      const AssetGenImage('assets/images/custom/cm_headphone_provider_ios.png');
+
   /// File path: assets/images/custom/cmheadphone.png
   AssetGenImage get cmheadphone =>
       const AssetGenImage('assets/images/custom/cmheadphone.png');
@@ -78,6 +82,10 @@ class $AssetsImagesCustomGen {
   /// File path: assets/images/custom/cmheadphone_provider.png
   AssetGenImage get cmheadphoneProvider =>
       const AssetGenImage('assets/images/custom/cmheadphone_provider.png');
+
+  /// File path: assets/images/custom/cmheadphone_provider_short.png
+  AssetGenImage get cmheadphoneProviderShort => const AssetGenImage(
+      'assets/images/custom/cmheadphone_provider_short.png');
 
   /// File path: assets/images/custom/ffigen_config.png
   AssetGenImage get ffigenConfig =>
@@ -123,8 +131,10 @@ class $AssetsImagesCustomGen {
         airpods,
         bitfactoryLogoLong,
         bitfactoryLogoSmall,
+        cmHeadphoneProviderIos,
         cmheadphone,
         cmheadphoneProvider,
+        cmheadphoneProviderShort,
         ffigenConfig,
         flutterAirpodInit,
         flutterAirpodIos,
