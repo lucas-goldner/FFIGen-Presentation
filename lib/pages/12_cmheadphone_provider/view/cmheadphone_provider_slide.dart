@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercon_2023_presentation/generated/assets.gen.dart';
 import 'package:fluttercon_2023_presentation/generated/l10n.dart';
 import 'package:fluttercon_2023_presentation/presentation/provider/presentation_controller_provider.dart';
+import 'package:fluttercon_2023_presentation/slides/widgets/text/regular_text.dart';
 import 'package:fluttercon_2023_presentation/slides/widgets/text/title.dart';
 import 'package:fluttercon_2023_presentation/styles/fc_gradients.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -36,16 +37,26 @@ class CMHeadphoneProviderSlide extends HookConsumerWidget {
               child: Row(
                 children: [
                   Flexible(
-                    child: Assets.images.custom.cmheadphoneProviderShort.image(
-                      fit: BoxFit.contain,
+                    child: Column(
+                      children: [
+                        RegularText(S.of(context).dart),
+                        Assets.images.custom.cmheadphoneProviderShort.image(
+                          fit: BoxFit.contain,
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 20,
                   ),
                   Flexible(
-                    child: Assets.images.custom.cmHeadphoneProviderIos.image(
-                      fit: BoxFit.contain,
+                    child: Column(
+                      children: [
+                        RegularText(S.of(context).swift),
+                        Assets.images.custom.cmHeadphoneProviderIos.image(
+                          fit: BoxFit.contain,
+                        ),
+                      ],
                     ),
                   ),
                 ],

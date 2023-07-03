@@ -47,5 +47,7 @@
   "benefitTestable": "Testable",
   "benefitManyLanguages": "Supports various languages",
   "thanks": "Thanks",
-  "repoLink": "https://github.com/lucas-goldner/fluttercon_2023_presentation"
+  "repoLink": "https://github.com/lucas-goldner/fluttercon_2023_presentation",
+  "dart": "Dart",
+  "swift": "Swift"
 }

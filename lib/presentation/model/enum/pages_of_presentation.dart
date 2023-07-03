@@ -24,7 +24,7 @@ enum PagesOfPresentation {
   motivation(MotivationSlide(), 4),
   pushups(PushupSlide(), 1),
   solution(SolutionSlide(), 3),
-  methodChannels(MethodChannelsSlide(), 3),
+  methodChannels(MethodChannelsSlide(), 2),
   eventChannelFlutterSetup(EventChannelFlutterSetupSlide(), 1),
   eventChanneliOSSetup(
     EventChanneliOSSlide(),

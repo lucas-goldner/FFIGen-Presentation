@@ -479,6 +479,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Dart`
+  String get dart {
+    return Intl.message(
+      'Dart',
+      name: 'dart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swift`
+  String get swift {
+    return Intl.message(
+      'Swift',
+      name: 'swift',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

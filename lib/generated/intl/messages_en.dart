@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
         "compatibleLanguages": MessageLookupByLibrary.simpleMessage(
             "Compatible with various languages"),
+        "dart": MessageLookupByLibrary.simpleMessage("Dart"),
         "downsideControl": MessageLookupByLibrary.simpleMessage(
             "Less \'control\' than using methodchannels"),
         "downsideOutput":
@@ -88,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
             MessageLookupByLibrary.simpleMessage("Starts listening"),
+        "swift": MessageLookupByLibrary.simpleMessage("Swift"),
         "thanks": MessageLookupByLibrary.simpleMessage("Thanks"),
         "theMasterFile":
             MessageLookupByLibrary.simpleMessage("The master file"),

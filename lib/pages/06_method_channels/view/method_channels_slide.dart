@@ -76,52 +76,6 @@ class MethodChannelsSlide extends HookConsumerWidget {
                     const SizedBox(
                       height: 80,
                     ),
-                    Visibility(
-                      visible: index >= 2,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Row(
-                          children: [
-                            RegularText(S.of(context).flutter),
-                            const SizedBox(
-                              width: 60,
-                            ),
-                            Arrow(
-                              S.of(context).startsListening,
-                              height: 48,
-                            ),
-                            const SizedBox(
-                              width: 100,
-                            ),
-                            RegularText(S.of(context).eventChannels),
-                            const SizedBox(
-                              width: 60,
-                            ),
-                            Arrow(
-                              S.of(context).receivesEvents,
-                              height: 48,
-                            ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            RegularText(S.of(context).flutter),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Visibility(
-                      visible: index >= 2,
-                      child: RegularText(
-                        S.of(context).implementsFlutterStreamHandler,
-                        fontSize: 32,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 92,
-                    ),
                     const Spacer(),
                   ],
                 ),
