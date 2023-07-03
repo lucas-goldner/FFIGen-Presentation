@@ -30,7 +30,7 @@ class PushupSlide extends HookConsumerWidget {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 pushupsCalculator.calculatePushups(snapshot.data);
-                if (pushupsCalculator.state.amount == 10) {
+                if (pushupsCalculator.state.amount == 5) {
                   confettiControler.value.play();
                 }
 

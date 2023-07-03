@@ -8,7 +8,7 @@
   "ffigenSetup": "FFIGen Setup",
   "runFfigen": "Run FFIGen",
   "benefitsAndDownsides": "Benefits and downsides",
-  "pushups": "Pushups: {count} / 10",
+  "pushups": "Pushups: {count} / 5",
   "@pageHomeInboxCount": {
     "description": "Count of pushups",
     "placeholders": {
@@ -38,7 +38,7 @@
   "downsides": "Downsides",
   "benefits": "Benefits",
   "downsideSetup": "Initial setup can take time",
-  "downsideOutput": "Output can difficult",
+  "downsideOutput": "Output can be difficult",
   "downsideControl": "Less 'control' than using methodchannels",
   "downsideWontwork": "Possible to will not work (ObjC and Swift)",
   "benefitFast": "Fast development",

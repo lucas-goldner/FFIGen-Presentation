@@ -55,6 +55,7 @@ class AgendaSlideState extends ConsumerState<AgendaSlide> {
                   .image(
                 height: MediaQuery.of(context).size.height,
                 fit: BoxFit.cover,
+                key: const Key('AgendaBackgroundNoModel'),
               );
             },
           ),
