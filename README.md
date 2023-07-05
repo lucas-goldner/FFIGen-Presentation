@@ -23,6 +23,10 @@ Coremotion is not supported on macOS T-T. So I had to make a transmitter app on 
 that continuously sends me my AirPods data to a WebSocket server, which sends me that data
 directly to this presentation... But hey, at least it works now :D
 
+Want to see an app in action using the AirPods data?
+
+- [Check out Pushup Bro](https://apps.apple.com/us/app/pushup-bro/id1673181014)
+
 ## Getting Started
 
 _Warning:_ Only tested on macos, no idea how it looks like on other platforms.
