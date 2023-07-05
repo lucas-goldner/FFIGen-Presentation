@@ -20,7 +20,7 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(count) => "Pushups: ${count} / 10";
+  static String m0(count) => "Pushups: ${count} / 5";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -39,10 +39,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Benefits and downsides"),
         "compatibleLanguages": MessageLookupByLibrary.simpleMessage(
             "Compatible with various languages"),
+        "dart": MessageLookupByLibrary.simpleMessage("Dart"),
         "downsideControl": MessageLookupByLibrary.simpleMessage(
             "Less \'control\' than using methodchannels"),
         "downsideOutput":
-            MessageLookupByLibrary.simpleMessage("Output can difficult"),
+            MessageLookupByLibrary.simpleMessage("Output can be difficult"),
         "downsideSetup":
             MessageLookupByLibrary.simpleMessage("Initial setup can take time"),
         "downsideWontwork": MessageLookupByLibrary.simpleMessage(
@@ -88,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "runFfigen": MessageLookupByLibrary.simpleMessage("Run FFIGen"),
         "startsListening":
             MessageLookupByLibrary.simpleMessage("Starts listening"),
+        "swift": MessageLookupByLibrary.simpleMessage("Swift"),
         "thanks": MessageLookupByLibrary.simpleMessage("Thanks"),
         "theMasterFile":
             MessageLookupByLibrary.simpleMessage("The master file"),

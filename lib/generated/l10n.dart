@@ -140,10 +140,10 @@ class S {
     );
   }
 
-  /// `Pushups: {count} / 10`
+  /// `Pushups: {count} / 5`
   String pushups(Object count) {
     return Intl.message(
-      'Pushups: $count / 10',
+      'Pushups: $count / 5',
       name: 'pushups',
       desc: '',
       args: [count],
@@ -380,10 +380,10 @@ class S {
     );
   }
 
-  /// `Output can difficult`
+  /// `Output can be difficult`
   String get downsideOutput {
     return Intl.message(
-      'Output can difficult',
+      'Output can be difficult',
       name: 'downsideOutput',
       desc: '',
       args: [],
@@ -475,6 +475,26 @@ class S {
     return Intl.message(
       'https://github.com/lucas-goldner/fluttercon_2023_presentation',
       name: 'repoLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dart`
+  String get dart {
+    return Intl.message(
+      'Dart',
+      name: 'dart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swift`
+  String get swift {
+    return Intl.message(
+      'Swift',
+      name: 'swift',
       desc: '',
       args: [],
     );

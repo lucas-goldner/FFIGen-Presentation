@@ -24,7 +24,7 @@ enum PagesOfPresentation {
   motivation(MotivationSlide(), 4),
   pushups(PushupSlide(), 1),
   solution(SolutionSlide(), 3),
-  methodChannels(MethodChannelsSlide(), 3),
+  methodChannels(MethodChannelsSlide(), 2),
   eventChannelFlutterSetup(EventChannelFlutterSetupSlide(), 1),
   eventChanneliOSSetup(
     EventChanneliOSSlide(),
@@ -39,7 +39,7 @@ enum PagesOfPresentation {
     2,
   ),
   xcodeLinking(XcodeLinkingSlide(), 3),
-  cmheadphoneProvider(CMHeadphoneProviderSlide(), 1),
+  cmheadphoneProvider(CMHeadphoneProviderSlide(), 2),
   downsides(DownsidesSlide(), 4),
   benefits(BenefitsSlide(), 5),
   outro(OutroSlide(), 1);
