@@ -44,4 +44,12 @@ $ flutter pub run intl_utils:generate
 $ flutter run -d macos
 ```
 
-!To run the complete presentation, also clone Airpods Gate & Airpods Transmitter and run them before running this presentation
+To run the complete presentation, also clone Airpods Gate & Airpods Transmitter and run them before running this presentation!
+
+## Some lovely comments 😃
+
+- https://twitter.com/ue_man/status/1676705877263253504?s=46&t=OAbBsZDKzkzBBmZOn9iZig
+- https://www.linkedin.com/posts/mikolaj-witkowski-5b44b9198_embeddedsystems-mobileappdevelopment-gamedevelopment-activity-7084091440900780032-z9UZ/?utm_source=share&utm_medium=member_ios
+- https://twitter.com/raphaeldelio/status/1676536391797207040?s=46&t=OAbBsZDKzkzBBmZOn9iZig
+
+And many more people that told me directly in person, thx to everyone. Hopefully, this is the first of many to come. 😄
